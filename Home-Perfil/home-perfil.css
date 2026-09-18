@@ -1,0 +1,85 @@
+
+.cabecalho {
+    background-color: black;
+    height: 100px;
+}
+
+.banner-inicio {
+    color: white;
+
+    padding: 0 105px 0;
+    position: relative;
+    height: 80vh;
+    background-image: url(../imgs/Rectangle\ 41.png);
+    background-size: cover;
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.bem-vindo {
+    display: flex;
+    flex-direction: row;
+
+    color: #ffffff;
+
+    margin-top: 50px;
+    font-size: 2.5em;
+    
+    width: 800px;
+    height: 100px;
+}
+
+.card-michael {
+    margin-top: 50px;
+    display: grid;
+    justify-content: center;
+    
+}
+.card-michael p {
+    color: #FFFFFF;
+    font-size: 2.5em;
+    font-weight: 600;
+    width: 320px;
+}
+
+.card-ouvindo {
+    height: 400px;
+    position: relative;
+    top: 250px;
+    align-items: flex-start;
+}
+.card-ouvindo p {
+    font-size: 2em;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+
+.botao-play {
+    background-color: #0C2B6D;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+
+}
+
+#icone-play {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 130%;
+}
+
+
+
+
+
