@@ -1,0 +1,87 @@
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(imgs/tela-edit-user.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+
+
+.login {
+
+    padding: 5px;
+    text-decoration: none;
+    color: var(--gelo-branco);
+    font-weight: 700;
+}
+
+.cabecalho {
+    width: 100%;
+    padding: 15px 100px;
+    background-color: var(--preto-profundo);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+    justify-content: center; 
+
+    background-color: var(--preto-profundo);
+
+    width: 90%;              
+    max-width: 900px;       
+    height: auto;
+    margin: 40px auto;
+
+    border-radius: 30px;
+    padding: 40px;
+    box-sizing: border-box;  
+}
+
+
+
+.imagemTopo {
+    height: 70px;
+    border: 1px solid var(--gelo-branco);
+    border-radius: 100%;
+}
+
+.pesquisar {
+    display: flex;
+    align-items: center;
+    background-color: var(--cinza-grafite);
+    padding: 8px 16px;
+    border-radius: 10px;
+    width: 340px;
+}
+
+.pesquisar input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: var(--gelo-branco);
+    width: 100%;
+    font-family: inherit;
+    font-size: 90%;
+}
+
+
+.parteEtop {
+    display: flex;
+    align-items: center;
+}
+
+.menucentro {
+    display: flex;
+    flex-direction: center;
+}
