@@ -4,11 +4,16 @@
     height: 100px;
 }
 
+
+
+/* BANNER INICIAL */
+
+
+
 .banner-inicio {
     color: white;
 
-    padding: 0 105px 0;
-    position: relative;
+    padding: 50px 105px 50px;
     height: 80vh;
     background-image: url(../imgs/Rectangle\ 41.png);
     background-size: cover;
@@ -24,31 +29,30 @@
 
     color: #ffffff;
 
-    margin-top: 50px;
-    font-size: 2.5em;
     
-    width: 800px;
+    font-size: 3em;
     height: 100px;
 }
 
 .card-michael {
-    margin-top: 50px;
     display: grid;
-    justify-content: center;
+    gap: 0px;
     
 }
+
 .card-michael p {
+    text-align: center;
     color: #FFFFFF;
-    font-size: 2.5em;
-    font-weight: 600;
-    width: 320px;
+    font-size: 2em; 
+    width: 458px;
+    height: auto;
+
 }
 
 .card-ouvindo {
     height: 400px;
-    position: relative;
-    top: 250px;
-    align-items: flex-start;
+    width: 300px;
+
 }
 .card-ouvindo p {
     font-size: 2em;
@@ -56,9 +60,12 @@
     margin-bottom: 20px;
 }
 
+.play-musica {
+    position: relative;
+}
 
-.botao-play {
-    background-color: #0C2B6D;
+.botao-interativo {
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,10 +73,13 @@
     width: 60px;
     height: 60px;
 
-    position: absolute;
+
+}
+
+.botao-play {
+    background-color: #0C2B6D;
     right: -20px;
     bottom: -20px;
-
 }
 
 #icone-play {
@@ -78,6 +88,52 @@
     color: #FFFFFF;
     font-size: 130%;
 }
+
+.itens-esquerda {
+    display: grid;
+    justify-content: space-between;
+}
+
+
+
+/* ARTISTAS FAVORITOS */
+
+
+
+.artistas-favoritos {
+    padding: 0 90px 0;
+}
+
+.favoritado img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+}
+
+.favoritado {
+    position: relative;
+}
+
+.artistas {
+    display: flex;
+    justify-content: space-between;
+}
+
+.botao-favorito {
+    right: -15px;
+    bottom: 15px;
+}
+
+#icone-coracao {
+    color: #FF0000;
+    font-size: 200%;
+}
+
+.adicionar {
+    background-color: none;
+}
+
+
 
 
 
