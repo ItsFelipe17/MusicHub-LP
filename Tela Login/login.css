@@ -1,53 +1,51 @@
-/* RESET */
-
 * {
+    box-sizing: border-box;
+}
+
+html,
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 body {
-    background-color: #0c0f1a;
+    background: url('../imgs/Fundo MH.svg') center / cover no-repeat;
 }
+
 
 /* CABEÇALHO */
 
 .cabecalho {
-    display: flex;
-    align-items: center;
-
-    padding: 25px 40px;
+    position: absolute;
 }
 
 .logo {
+    font-size: 1.2em;
     display: flex;
     align-items: center;
-    gap: 10px;
 
-    text-decoration: none;
     color: #ffffff;
+    text-decoration: none;
 
-    font-size: 1.4em;
-    font-weight: 700;
+    margin: 20px;
 }
 
 .logo img {
-    width: 26px;
-    height: 26px;
+    margin-bottom: 15px;
 }
 
-/* MAIN / FUNDO */
+
+/* CONTEÚDO */
 
 .conteudo {
-    background-size: cover;
-    background-image: url('../imgs/Pagina de login.svg');
-    min-height: 90vh;
+    width: 100%;
+    height: 100vh;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 }
+
 
 /* LOGIN */
 
@@ -64,35 +62,22 @@ body {
     gap: 25px;
 }
 
-/* CABEÇALHO DO LOGIN */
-
-.login-cabecalho {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    width: 100%;
+.login h1 {
+    font-size: 4em;
+    white-space: nowrap;
 }
 
-.login-cabecalho h1 {
-    font-size: 2.5em;
-    font-weight: 800;
-    color: #ffffff;
 
-    text-align: left;
-    width: 100%;
-}
-
-/* FORMULARIO */
+/* FORMULÁRIO */
 
 form {
     display: flex;
     flex-direction: column;
 
     width: 100%;
-
     gap: 15px;
 }
+
 
 /* CAMPOS */
 
@@ -104,94 +89,86 @@ form {
 
 .campo label {
     color: #ffffff;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 .campo input {
     width: 100%;
     height: 45px;
 
+    padding: 0 15px;
+
     border: 1px solid #ffffff30;
     border-radius: 8px;
+
+    outline: none;
 
     background-color: #000000;
     color: #ffffff;
 
-    padding: 0 15px;
     font-size: 1em;
-    outline: none;
 }
 
-/* DIVISOR "ou" */
 
-.divisor {
-    color: #ffffff;
-    text-align: center;
+/* DIVISOR "OU" */
 
+.separador {
     margin: 5px 0;
+
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
 }
+
 
 /* BOTÕES SOCIAIS */
 
 .botao-social {
+    position: relative;
+
     width: 100%;
     height: 45px;
-
-    border: 1px solid #ffffff30;
-    border-radius: 25px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    gap: 15px;
+    border: 1px solid #ffffff30;
+    border-radius: 25px;
 
-    font-size: 1em;
+    background-color: #000000;
     color: #ffffff;
 
+    font-size: 1em;
     cursor: pointer;
-
-    transition: transform 0.2s;
 }
 
 .botao-social img {
+    position: absolute;
+    left: 30px;
+
     width: 22px;
     height: 22px;
 }
 
-.botao-social:hover {
-    transform: translateY(-2px);
-}
-
-.botao-google {
-    background-color: #000000;
-}
-
-.botao-facebook {
-    background-color: #000000;
-}
-
-.botao-apple {
-    background-color: #000000;
-    color: #FFFFFF;
-}
 
 /* TEXTO CADASTRO */
 
 .texto-cadastro {
+    margin-top: 10px;
+
     color: #ffffff;
     text-align: center;
-
-    margin-top: 10px;
 }
 
 .link-cadastrar {
     color: #2563EB;
-    text-align: center;
-    text-decoration: underline;
 
     font-size: 1em;
+    text-align: center;
+    text-decoration: underline;
 }
+
 
 /* BOTÃO ENTRAR */
 

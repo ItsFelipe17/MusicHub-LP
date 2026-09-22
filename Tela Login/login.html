@@ -4,66 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MusicHub - login</title>
-    <link rel="stylesheet" href="login.css">
+
+    <title>MusicHub - Login</title>
+
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="./login.css">
+    <link rel="shortcut icon" href="../imgs/Logo MH.svg" type="image/svg+xml">
 </head>
 
 <body>
+
     <header class="cabecalho">
         <a href="#" class="logo">
-            <!-- IMAGEM -->
-            <span>MusicHub.</span>
+            <img src="../imgs/Logo MH.svg" alt="Logo do sistema MusicHub">
+            <h1>MusicHub</h1>
         </a>
     </header>
 
     <main class="conteudo">
 
         <section class="login">
-            <div class="login-cabecalho">
-                <h1>Bem-vindo</h1>
-            </div>
+
+            <h1>Bem-vindo</h1>
 
             <form>
+
                 <div class="campo">
                     <label for="email">Email:</label>
-                    <input type="email" id="email">
+                    <input type="email" id="email" name="email">
                 </div>
 
                 <div class="campo">
                     <label for="senha">Senha:</label>
-                    <input type="password" id="senha">
+                    <input type="password" id="senha" name="senha">
                 </div>
 
-                <p class="divisor">ou</p>
+                <p class="separador">ou</p>
 
-                <button type="button" class="botao-social botao-google">
-                    <!-- IMAGEM -->
-                    <span>Continuar com Google</span>
+                <button type="button" class="botao-social">
+                    <img src="../imgs/Google Logo.svg" alt="Logo Google">
+                    Continuar com Google
                 </button>
 
-                <button type="button" class="botao-social botao-facebook">
-                    <!-- IMAGEM -->
-                    <span>Continuar com Facebook</span>
+                <button type="button" class="botao-social">
+                    <img src="../imgs/Facebook Logo.svg" alt="Logo Facebook">
+                    Continuar com Facebook
                 </button>
 
-                <button type="button" class="botao-social botao-apple">
-                    <!-- IMAGEM -->
-                    <span>Continuar com Apple</span>
+                <button type="button" class="botao-social">
+                    <img src="../imgs/Apple Logo.svg" alt="Logo Apple">
+                    Continuar com Apple
                 </button>
 
-                <p class="texto-cadastro">
-                    Ainda não tem uma conta?
-                </p>
+                <p class="texto-cadastro">Ainda não tem uma conta?</p>
 
                 <a href="#" class="link-cadastrar">Cadastrar</a>
 
                 <button type="submit" class="botao-entrar">Entrar</button>
+
             </form>
+
         </section>
 
     </main>
 
-    <script src="login.js"></script>
 </body>
 
 </html>
