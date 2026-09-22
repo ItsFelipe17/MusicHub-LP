@@ -6,6 +6,37 @@
 
 
 
+/* -----GLOBAL----- */
+
+.titulo-secao {
+    text-align: center;
+    margin-top:70px;
+    margin-bottom: 50px;
+}
+
+.musicas {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.musica img {
+    width: 350px;
+    height: 350px;
+    margin-bottom: 10px;
+}
+
+.musica h2 {
+    font-size: 2em;
+}
+
+
+
+
+
+
+
+
 /* BANNER INICIAL */
 
 
@@ -22,6 +53,7 @@
     justify-content: space-between;
     
 }
+
 
 .bem-vindo {
     display: flex;
@@ -112,6 +144,15 @@
 
 .favoritado {
     position: relative;
+
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.favoritado p{
+    font-size: 1.2em;
+    margin-top: 15px;
 }
 
 .artistas {
@@ -120,8 +161,8 @@
 }
 
 .botao-favorito {
-    right: -15px;
-    bottom: 15px;
+    right: -10px;
+    bottom: 30px;
 }
 
 #icone-coracao {
@@ -130,8 +171,60 @@
 }
 
 .adicionar {
-    background-color: none;
+    border: none;
+    background: none;
 }
+
+
+
+/* OUVIDAS RECENTEMENTE */
+
+.ouvidas-recentemente {
+    padding: 0 90px 0;
+}
+
+
+
+/* Musicas em destaque */
+
+.musicas-destaque {
+    padding: 0 90px 0;
+    margin-bottom: 150px;
+}
+
+
+
+/* RODAPE */
+
+.footer {
+    padding: 0 90px 0;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    padding: 90px; 
+    border: 1px solid #FFFFFF;
+    height: 350px;
+}
+
+
+
+.navs {
+    display: grid;
+     gap: 15px;
+}
+
+.navs a {
+    text-decoration: none;
+    color: #FFFFFF85;
+    font-size: 1.2em;
+}
+
+.icones {
+    gap: 20px;
+}
+
 
 
 
