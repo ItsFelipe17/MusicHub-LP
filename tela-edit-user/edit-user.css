@@ -1,3 +1,5 @@
+/* FUNDO DA PÁGINA */
+
 body {
     min-height: 100vh;
     width: 100%;
@@ -6,82 +8,311 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
 }
 
+/* CABEÇALHO */
 
-.login {
+.cabecalho {
+    height: 72px;
+    padding: 0 3.6% 4px 8.9%;
+    background-color: var(--preto-profundo);
 
-    padding: 5px;
-    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 32%;
+    display: flex;
+    align-items: center;
+    gap: 0;
+
     color: var(--gelo-branco);
+    text-decoration: none;
+    font-size: 24px;
     font-weight: 700;
 }
 
-.cabecalho {
-    width: 100%;
-    padding: 15px 100px;
-    background-color: var(--preto-profundo);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-.perfil {
-    display: flex;
-    flex-direction: column; 
-    align-items: center;  
-    justify-content: center; 
-
-    background-color: var(--preto-profundo);
-
-    width: 90%;              
-    max-width: 900px;       
-    height: auto;
-    margin: 40px auto;
-
-    border-radius: 30px;
-    padding: 40px;
-    box-sizing: border-box;  
-}
-
-
-
-.imagemTopo {
-    height: 70px;
-    border: 1px solid var(--gelo-branco);
-    border-radius: 100%;
+.logo img {
+    width: 50px;
+    height: 50px;
+    transform: translateY(-5px);
 }
 
 .pesquisar {
+    width: 32%;
+    height: 39px;
+    padding: 0 20px 0 24px;
+    border-radius: 8px;
+    background-color: var(--cinza-grafite);
+
     display: flex;
     align-items: center;
-    background-color: var(--cinza-grafite);
-    padding: 8px 16px;
-    border-radius: 10px;
-    width: 340px;
+    gap: 15px;
 }
 
 .pesquisar input {
-    background: transparent;
+    flex: 1;
+    width: 100%;
+    min-width: 0;
     border: none;
     outline: none;
+    background-color: transparent;
+
     color: var(--gelo-branco);
-    width: 100%;
     font-family: inherit;
-    font-size: 90%;
+    font-size: 18px;
+    font-weight: 500;
 }
 
+.pesquisar input::placeholder {
+    color: #a1a1aa;
+}
 
-.parteEtop {
+.botao-pesquisar img {
+    width: 20px;
+    height: 20px;
+}
+
+.perfil-topo {
+    flex: 1;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    gap: 16px;
+
+    color: var(--gelo-branco);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.menucentro {
+.perfil-topo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+/* CARTÃO E IDENTIFICAÇÃO DO USUÁRIO */
+
+.perfil {
+    width: 85%;
+    max-width: 1200px;
+    min-height: 700px;
+    margin: 75px auto;
+    padding: 35px 40px;
+    border-radius: 16px;
+    background-color: var(--preto-profundo);
+}
+
+.topo-perfil {
     display: flex;
-    flex-direction: center;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.dados-usuario {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.foto-usuario {
+    width: 70px;
+    height: 72px;
+    border-radius: 50%;
+}
+
+.identificacao h1 {
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.identificacao p {
+    color: #8d8d8d;
+    font-size: 12px;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao-sair {
+    width: 108px;
+    height: 32px;
+    margin-top: 9px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f94144;
+    color: var(--gelo-branco);
+
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.botao-salvar {
+    width: 108px;
+    height: 32px;
+    margin-top: 9px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--azul-escuro);
+    color: var(--gelo-branco);
+
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* FORMULÁRIO EM DUAS COLUNAS */
+
+.formulario-perfil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 23px;
+
+    padding-bottom: 17px;
+    border-bottom: 2px solid var(--azul-escuro);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    color: #c7c7c7;
+    font-size: 12px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    height: 38px;
+    padding: 0 14px;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+
+    font-family: inherit;
+    font-size: 12px;
+    color: #969696;
+}
+
+.campo input::placeholder {
+    color: #969696;
+}
+
+.campo-com-seta {
+    display: flex;
+    align-items: center;
+    padding-right: 14px;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+}
+
+.campo-com-seta select {
+    flex: 1;
+    min-width: 0;
+    height: 36px;
+    border: none;
+    background-color: transparent;
+}
+
+.campo-com-seta select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.seta {
+    color: #777e82;
+    font-size: 20px;
+    margin-top: -8px;
+}
+
+/* ENDEREÇO DE E-MAIL */
+
+.area-email {
+    margin-top: 58px;
+}
+
+.area-email h2 {
+    margin-bottom: 13px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.email-cadastrado {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.icone-email {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #1e2837;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-email img {
+    width: 15px;
+    height: 13px;
+}
+
+.endereco-email {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 12px;
+}
+
+.botao-remover {
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 50%;
+    background-color: #1e2837;
+    color: #ff565e;
+    font-size: 24px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-remover span {
+    font-size: 20px;
+    transform: translateY(1px);
+}
+
+.tempo-email {
+    margin-top: 5px;
+    color: #8d8d8d;
+    font-size: 12px;
+}
+
+.botao-adicionar {
+    margin: 20px 0 0 27px;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e2837;
+    color: #4182f9;
+
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
 }

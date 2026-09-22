@@ -4,45 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="edit-user.css">
     <link rel="stylesheet" href="../global.css">
-    <link rel="shortcut icon" href="imgs/logo-musicHub.svg" type="image/x-icon">
-    <title>Edição de úsuario</title>
+    <link rel="stylesheet" href="edit-user.css">
+    <link rel="shortcut icon" href="imgs/logo-musicHub.svg" type="image/svg+xml">
+    <title>Edição de usuário | MusicHub</title>
 </head>
 
 <body>
+    <!-- CABEÇALHO -->
     <header class="cabecalho">
-        <a href="#">
-            <img src="imgs/logo-musicHub.svg" alt="Logo musicHub">
+        <a class="logo" href="../Home/home.html">
+            <img src="imgs/logo-musicHub.svg" alt="">
+            <span>MusicHub.</span>
         </a>
 
-        <nav class="pesquisar">
-            <input type="pesquisa" id="pesquisa" placeholder="Pesquisar">
+        <div class="pesquisar">
+            <input type="search" id="pesquisa" placeholder="Pesquisar" aria-label="Pesquisar">
             <img src="imgs/lupa.svg" alt="">
-        </nav>
+            </button>
+        </div>
 
-        <nav>
-            <div class="parteEtop">
-                <a class="login" href="#acesso">Seu perfil</a>
-                <a class="" href=""><img class="imagemTopo" src="imgs/leandro.svg" alt=""></a>
-
-            </div>
-        </nav>
+        <a class="perfil-topo" href="#perfil">
+            <span>Seu Perfil</span>
+            <img src="imgs/leandro.svg" alt="Foto de Leandro">
+        </a>
     </header>
 
-
-    <!-- TODO conteudo principal -->
+    <!-- CARTÃO DO PERFIL -->
     <main>
+        <section class="perfil" id="perfil" aria-labelledby="nome-usuario">
+            <div class="topo-perfil">
+                <div class="dados-usuario">
+                    <img class="foto-usuario" src="imgs/leandro.svg" alt="Foto de Leandro">
 
-        <section class="perfil">
-            <div class="menucentro">
-                <img src="imgs/leandro.svg" alt="">
-                <h4>Leandro</h4>
+                    <div class="identificacao">
+                        <h1 id="nome-usuario">Leandro</h1>
+                        <p>Leandrodelavale@gmail.com</p>
+                    </div>
+                </div>
+                <div class="botoes">
+                    <button class="botao-salvar" type="button">Salvar</button>
+                    <button class="botao-sair" type="button">Sair</button>
+                </div>
             </div>
 
+            <!-- CAMPOS DE EDIÇÃO -->
+            <form class="formulario-perfil">
+                <div class="campo">
+                    <label for="nome-completo">Nome completo</label>
+                    <input type="text" id="nome-completo" name="nome" placeholder="Seu Nome">
+                </div>
+
+                <div class="campo">
+                    <label for="apelido">Apelido</label>
+                    <input type="text" id="apelido" name="apelido" placeholder="como vamos te chamar?">
+                </div>
+
+                <div class="campo">
+                    <label for="genero">Gênero</label>
+                    <div class="campo-com-seta">
+                        <select id="genero" name="genero">
+                            <option value="">Prefiro não informar</option>
+                            <option value="feminino">Feminino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <span class="seta" aria-hidden="true">⌄</span>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="telefone">Número de Telefone</label>
+                    <div>
+                        <input type="tel" id="telefone" name="telefone" placeholder="11998877654">
+                    </div>
+                </div>
+            </form>
+
+            <!-- ENDEREÇO DE E-MAIL -->
+            <section class="area-email" aria-labelledby="titulo-email">
+                <h2 id="titulo-email">Meu endereço de email</h2>
+
+                <div class="email-cadastrado">
+                    <div class="icone-email">
+                        <img src="imgs/mail-icon.svg" alt="">
+                    </div>
+
+                    <div class="dados-email">
+                        <div class="endereco-email">
+                            <p>Leandrodelaval@gmail.com</p>
+                            <button class="botao-remover" type="button" aria-label="Remover endereço de email">
+                                <span>×</span>
+                            </button>
+                        </div>
+                        <p class="tempo-email">há 1 mês</p>
+                    </div>
+                </div>
+
+                <button class="botao-adicionar" type="button">+Adicionar endereço de email</button>
+            </section>
         </section>
     </main>
-
 </body>
 
 </html>
