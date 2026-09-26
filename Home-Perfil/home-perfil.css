@@ -1,13 +1,9 @@
 
-.cabecalho {
-    background-color: black;
-    height: 100px;
-}
-
-
-
 /* -----GLOBAL----- */
 
+body {
+    padding-bottom: 20px;
+}
 .titulo-secao {
     text-align: center;
     margin-top:70px;
@@ -18,21 +14,105 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
+    gap: 30px;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    
+    flex-shrink: 0;
+    overflow-x: scroll; /* permite que o objeto role para o lado */
+}
+
+.musica {
+    transition: background-color 0.3s ease;
+}
+
+.musicas::-webkit-scrollbar {
+    display: none;
 }
 
 .musica img {
     width: 350px;
     height: 350px;
     margin-bottom: 10px;
+
+     user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
 }
 
 .musica h2 {
     font-size: 2em;
 }
 
+.musica:hover{
+    background-color: #2f2f3080;
+    border-radius: 10px;
+}
 
 
 
+
+/* CABECALHO */
+
+
+
+.cabecalho {
+    background-color: var(--preto-profundo);
+    height: 100px;
+
+    padding: 0 105px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao-logo {
+    background: none;
+    border: none;
+
+    display: flex;
+
+    color: #FFFFFF;
+
+
+}
+
+.botao-logo img {
+    width: 200px;
+}
+
+.pesquisar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    padding: 0 35px 0;
+    background-color: #515757;
+
+    width: 550px;
+    height: 40px;
+}
+
+.pesquisar p {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 70%;
+}
+
+.lupa {
+    font-size: 20px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
 
 
 
@@ -44,15 +124,21 @@
 .banner-inicio {
     color: white;
 
+    position: relative;
     padding: 50px 105px 50px;
     height: 80vh;
-    background-image: url(../imgs/Rectangle\ 41.png);
-    background-size: cover;
+   background-image: url(../imgs/Rectangle\ 41.svg);
+
+   background-size: cover;
+    overflow-y: hidden;
+    
 
     display: flex;
     justify-content: space-between;
     
 }
+
+
 
 
 .bem-vindo {
@@ -181,8 +267,10 @@
 
 .ouvidas-recentemente {
     padding: 0 90px 0;
-}
+    
+    gap: 30px;
 
+}
 
 
 /* Musicas em destaque */
@@ -190,6 +278,7 @@
 .musicas-destaque {
     padding: 0 90px 0;
     margin-bottom: 150px;
+    gap: 30px;
 }
 
 
@@ -223,6 +312,610 @@
 
 .icones {
     gap: 20px;
+}
+
+/* =========================
+   RESPONSIVIDADE 1024px
+========================= */
+
+@media screen and (max-width: 1024px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        padding: 0 40px;
+        gap: 25px;
+    }
+
+    .botao-logo img {
+        width: 160px;
+    }
+
+    .pesquisar {
+        width: 40%;
+        padding: 0 20px;
+    }
+
+    .perfil {
+        gap: 10px;
+    }
+
+    .perfil h2 {
+        font-size: 1.2em;
+    }
+
+
+    /* BANNER */
+
+    .banner-inicio {
+        padding: 40px 50px;
+        height: 70vh;
+        gap: 30px;
+        background-position: center;
+    }
+
+    .bem-vindo {
+        font-size: 2.3em;
+        height: auto;
+    }
+
+    .card-ouvindo {
+        width: 260px;
+    }
+
+    .card-ouvindo p {
+        font-size: 1.5em;
+        width: 260px;
+    }
+
+    #foto-esquerda {
+        width: 240px;
+        height: auto;
+    }
+
+    .card-michael {
+        width: 40%;
+    }
+
+    .card-michael p {
+        width: 100%;
+        font-size: 1.6em;
+    }
+
+    #foto-michael {
+        width: 100%;
+        height: auto;
+    }
+
+    .itens-esquerda {
+        gap: 50px;
+    }
+
+
+    /* ARTISTAS FAVORITOS */
+
+    .artistas-favoritos,
+    .ouvidas-recentemente,
+    .musicas-destaque {
+        padding: 0 40px;
+    }
+
+    .favoritado img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .favoritado p {
+        font-size: 1em;
+    }
+
+
+    /* MÚSICAS */
+
+    .musicas {
+        gap: 20px;
+    }
+
+    .musica {
+        flex: 0 0 250px;
+    }
+
+    .musica img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+
+    .musica h2 {
+        font-size: 1.4em;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 0 40px;
+    }
+
+    .rodape {
+        padding: 50px;
+        height: auto;
+        min-height: 250px;
+        gap: 35px;
+    }
+
+    .navs {
+        gap: 12px;
+    }
+
+    .navs h2 {
+        font-size: 1.2em;
+    }
+
+    .navs a {
+        font-size: 1em;
+    }
+
+    .icones img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE 768px
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        height: auto;
+        min-height: 90px;
+        padding: 20px 25px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .botao-logo img {
+        width: 140px;
+    }
+
+    .perfil {
+        margin-left: auto;
+    }
+
+    .perfil h2 {
+        font-size: 1em;
+    }
+
+    .perfil img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .pesquisar {
+        order: 3;
+        width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+    }
+
+
+    /* BANNER */
+
+    .banner-inicio {
+        height: auto;
+        min-height: 0;
+        padding: 40px 30px;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+        background-position: center;
+    }
+
+    .itens-esquerda {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .bem-vindo {
+        font-size: 2em;
+        height: auto;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .card-ouvindo {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+    }
+
+    .card-ouvindo p {
+        width: 100%;
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    .play-musica {
+        width: 100%;
+    }
+
+    #foto-esquerda {
+        width: 100%;
+        height: auto;
+    }
+
+    .botao-play {
+        right: -10px;
+        bottom: -10px;
+    }
+
+    .card-michael {
+        width: 100%;
+        max-width: 400px;
+        justify-items: center;
+    }
+
+    .card-michael p {
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    #foto-michael {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-michael img:last-child {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* TÍTULOS DAS SEÇÕES */
+
+    .titulo-secao {
+        font-size: 1.6em;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+
+
+    /* ARTISTAS FAVORITOS */
+
+    .artistas-favoritos,
+    .ouvidas-recentemente,
+    .musicas-destaque {
+        padding: 0 25px;
+    }
+
+    .artistas {
+        display: flex;
+        justify-content: flex-start;
+        gap: 30px;
+        overflow-x: auto;
+        padding: 10px 5px 20px;
+    }
+
+    .artistas::-webkit-scrollbar {
+        display: none;
+    }
+
+    .favoritado {
+        flex: 0 0 130px;
+    }
+
+    .favoritado img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .adicionar {
+        flex: 0 0 60px;
+    }
+
+    .adicionar img {
+        width: 130px;
+        height: 130px;
+    }
+
+
+    /* MÚSICAS */
+
+    .musicas {
+        justify-content: flex-start;
+        gap: 20px;
+        overflow-x: auto;
+        padding-bottom: 10px;
+    }
+
+    .musica {
+        flex: 0 0 200px;
+    }
+
+    .musica img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .musica h2 {
+        font-size: 1.2em;
+    }
+
+    .musica p {
+        font-size: 0.9em;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 0 25px;
+    }
+
+    .rodape {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 40px 25px;
+        padding: 40px;
+        height: auto;
+    }
+
+    .navs {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        min-width: 0;
+    }
+
+    .navs h2 {
+        font-size: 1.2em;
+        margin: 0;
+    }
+
+    .navs a {
+        font-size: 1em;
+        overflow-wrap: anywhere;
+    }
+
+    .icones {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .icones img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE 500px
+========================= */
+
+@media screen and (max-width: 500px) {
+
+    /* GERAL */
+
+    body {
+        padding-bottom: 20px;
+    }
+
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .botao-logo img {
+        width: 120px;
+    }
+
+    .perfil {
+        gap: 8px;
+    }
+
+    .perfil h2 {
+        font-size: 0.9em;
+    }
+
+    .perfil img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .pesquisar {
+        padding: 0 15px;
+        height: 38px;
+    }
+
+    .pesquisar p {
+        font-size: 16px;
+    }
+
+    .lupa {
+        font-size: 16px;
+    }
+
+
+    /* BANNER */
+
+    .banner-inicio {
+        padding: 35px 20px;
+        gap: 45px;
+        background-position: center;
+    }
+
+    .itens-esquerda {
+        gap: 30px;
+    }
+
+    .bem-vindo {
+        font-size: 1.5em;
+        line-height: 1.3;
+        text-align: center;
+    }
+
+    .card-ouvindo {
+        max-width: 280px;
+    }
+
+    .card-ouvindo p {
+        font-size: 1.2em;
+        line-height: 1.4;
+    }
+
+    #foto-esquerda {
+        width: 100%;
+    }
+
+    .botao-interativo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .botao-play {
+        right: -8px;
+        bottom: -8px;
+    }
+
+    #icone-play {
+        font-size: 100%;
+    }
+
+    .card-michael {
+        max-width: 280px;
+    }
+
+    .card-michael p {
+        font-size: 1.3em;
+    }
+
+
+    /* TÍTULOS */
+
+    .titulo-secao {
+        font-size: 1.3em;
+        margin-top: 40px;
+        margin-bottom: 25px;
+    }
+
+
+    /* ARTISTAS */
+
+    .artistas-favoritos,
+    .ouvidas-recentemente,
+    .musicas-destaque {
+        padding: 0 20px;
+    }
+
+    .artistas {
+        gap: 20px;
+    }
+
+    .favoritado {
+        flex: 0 0 110px;
+    }
+
+    .favoritado img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .favoritado p {
+        font-size: 0.9em;
+        margin-top: 10px;
+    }
+
+    .botao-favorito {
+        right: -5px;
+        bottom: 25px;
+    }
+
+    #icone-coracao {
+        font-size: 150%;
+    }
+
+    .adicionar img {
+        width: 110px;
+        height: 110px;
+    }
+
+
+    /* MÚSICAS */
+
+    .musicas {
+        gap: 15px;
+    }
+
+    .musica {
+        flex: 0 0 150px;
+    }
+
+    .musica img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 8px;
+    }
+
+    .musica h2 {
+        font-size: 1em;
+        line-height: 1.3;
+    }
+
+    .musica p {
+        font-size: 0.8em;
+    }
+
+    .ouvidas-recentemente,
+    .musicas-destaque {
+        margin-bottom: 60px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 0 15px;
+    }
+
+    .rodape {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 30px 25px;
+        height: auto;
+    }
+
+    .navs {
+        gap: 12px;
+    }
+
+    .navs h2 {
+        font-size: 1.1em;
+    }
+
+    .navs a {
+        font-size: 0.95em;
+    }
+
+    .icones {
+        flex-direction: row;
+        gap: 15px;
+    }
+
+    .icones img {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 
