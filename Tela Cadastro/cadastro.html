@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MusicHub - Cadastro</title>
+
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="./cadastro.css">
+    <link rel="shortcut icon" href="../imgs/Logo MH.svg" type="image/svg+xml">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <a href="#" class="logo">
+            <img src="../imgs/Logo MH.svg" alt="Logo do sistema MusicHub">
+            <h1>MusicHub</h1>
+        </a>
+    </header>
+
+    <main class="conteudo">
+
+        <section class="login">
+
+            <h1>Cadastre-se</h1>
+
+            <form>
+
+                <div class="campo">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <div class="campo">
+                    <label for="usuario">Usuário</label>
+                    <input type="text" id="usuario" name="usuario">
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha">
+                </div>
+
+                <div class="campo-data">
+
+                    <input type="text" class="input-dia" name="dia" placeholder="dd" maxlength="2" inputmode="numeric">
+
+                    <select class="input-mes" name="mes">
+                        <option value="" disabled selected>Mês</option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
+                    </select>
+
+                    <input type="text" class="input-ano" name="ano" placeholder="aaaa" maxlength="4" inputmode="numeric">
+
+                </div>
+
+                <p class="separador">ou</p>
+
+                <button type="button" class="botao-social">
+                    <img src="../imgs/Google Logo.svg" alt="Logo Google">
+                    Inscrever-se com Google
+                </button>
+
+                <button type="button" class="botao-social">
+                    <img src="../imgs/Facebook Logo.svg" alt="Logo Facebook">
+                    Inscrever-se com Facebook
+                </button>
+
+                <button type="button" class="botao-social">
+                    <img src="../imgs/Apple Logo.svg" alt="Logo Apple">
+                    Inscrever-se com Apple
+                </button>
+
+                <button type="submit" class="botao-entrar">Entrar</button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
