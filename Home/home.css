@@ -1,0 +1,753 @@
+/* BARRA SUPERIOR */
+
+.cabecalho {
+    background-color: var(--preto-profundo);
+    height: 100px;
+
+    padding: 0 105px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao-logo {
+    background: none;
+    border: none;
+
+    display: flex;
+
+    color: var(--gelo-branco);
+
+
+}
+
+.botao-logo img {
+    width: 200px;
+}
+
+.pesquisar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    padding: 0 35px 0;
+    background-color: #515757;
+
+    width: 550px;
+    height: 40px;
+}
+
+.pesquisar p {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 70%;
+}
+
+.lupa {
+    font-size: 20px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.botao-entrar{
+    width: 100px;
+    height: 45px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+/* ÁREA DO ÁLBUM */
+
+.album-fundo {
+    position: relative;
+
+    width: 100%;
+    height: 450px;
+
+    overflow: hidden;
+
+    background-color: #b5d0d9;
+    margin-bottom:50px;
+}
+
+/* IMAGEM DE FUNDO */
+
+#fundo-desfoque {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    filter: blur(5px);
+
+    opacity: 0.75;
+}
+
+/* TEXTO PRINCIPAL */
+
+.album-fundo h2 {
+    position: absolute;
+
+    left: 120px;
+    top: 45px;
+
+    width: 280px;
+
+    margin: 0;
+
+    color:var(--gelo-branco);
+
+    font-size: 35px;
+    line-height: 1.4;
+
+    font-weight: bold;
+
+    z-index: 2;
+}
+
+/* BOTÃO CRIAR PLAYLIST */
+
+.Criar-playlist {
+    position: absolute;
+
+    left: 120px;
+    bottom: 38px;
+
+    background-color:var(--gelo-branco);
+
+    border: none;
+    border-radius: 9px;
+
+    padding: 8px 15px;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    z-index: 2;
+}
+
+/* CAPA DO ÁLBUM */
+
+#fotinha {
+    position: absolute;
+
+    width: 405px;
+    height: 405px;
+
+    object-fit: cover;
+
+    right: 200px;
+    top: 30px;
+
+    border-radius: 9px;
+
+    z-index: 2;
+}
+
+/*TÍTULOS DAS SEÇÕES*/
+     
+
+body > h1 {
+    text-align: center;
+    margin: 40px 0 30px;
+
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+.artistas-alta,
+.artistas-nacionais {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 120px;
+
+    padding: 0 60px;
+}
+
+
+/* CARD */
+
+.artistas-alta > div,
+.artistas-nacionais > div {
+    position: relative;
+
+    width: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+/* FOTO */
+
+.artistas-alta > div > img,
+.artistas-nacionais > div > img {
+    width: 190px;
+    height: 190px;
+
+    object-fit: cover;
+    border-radius: 50%;
+
+    display: block;
+}
+
+
+/*CORAÇÃO*/
+
+.botao-favorito {
+    position: absolute;
+
+    right: 0;
+    bottom: 40px;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 15px;
+
+    background-color: rgb(33, 52, 138);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+}
+
+.icone-coracao {
+    color:white;
+    font-size: 40px;
+}
+
+
+/* NOME */
+
+.artistas-alta p,
+.artistas-nacionais p {
+    margin: 12px 0 0;
+
+    font-size: 17px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* ESPAÇAMENTO */
+
+.artistas-alta {
+    margin-bottom: 45px;
+}
+
+.artistas-nacionais {
+    margin-bottom: 60px;
+}
+
+
+/*MÚSICAS*/
+
+.musicas-destaque {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 150px;
+
+    padding: 0 50px 80px;
+}
+
+
+/* CARD */
+
+.musicas-destaque > div {
+    width: 260px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* CAPA */
+
+.musicas-destaque img {
+    width: 350px;
+    height: 350px;
+
+    object-fit: cover;
+
+    border-radius: 5px;
+
+    display: block;
+}
+
+
+/* NOME DA MÚSICA */
+
+.musicas-destaque h2 {
+    margin: 12px 0 4px;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* ARTISTA */
+
+.musicas-destaque p {
+    margin: 0;
+    font-size: 15px;
+
+    color: #bcbcbc;
+}
+
+/* FOOTER */
+.footer {
+    padding: 0 90px 0;
+    margin-bottom: 20px;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    padding: 90px; 
+    border: 1px solid #FFFFFF;
+    height: 350px;
+}
+
+
+
+.navs {
+    display: grid;
+     gap: 15px;
+}
+
+.navs a {
+    text-decoration: none;
+    color: #FFFFFF85;
+    font-size: 1.2em;
+}
+
+.icones {
+    gap: 20px;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+   ======================================== */
+
+
+/* =========================
+   ATÉ 1024px
+   ========================= */
+
+@media (max-width: 1024px) {
+
+    /* HEADER */
+
+    .cabecalho {
+        padding: 0 50px;
+    }
+
+    .botao-logo img {
+        width: 170px;
+    }
+
+    .pesquisar {
+        width: 400px;
+    }
+
+
+    /* ÁREA DO ÁLBUM */
+
+    .album-fundo h2 {
+        left: 70px;
+        width: 300px;
+        font-size: 30px;
+    }
+
+    .Criar-playlist {
+        left: 70px;
+    }
+
+    #fotinha {
+        width: 330px;
+        height: 330px;
+        right: 80px;
+        top: 60px;
+    }
+
+
+    /* ARTISTAS */
+
+    .artistas-alta,
+    .artistas-nacionais {
+        gap: 45px;
+        padding: 0 30px;
+    }
+
+    .artistas-alta > div,
+    .artistas-nacionais > div {
+        width: 150px;
+    }
+
+    .artistas-alta > div > img,
+    .artistas-nacionais > div > img {
+        width: 150px;
+        height: 150px;
+    }
+
+
+    /* MÚSICAS */
+
+    .musicas-destaque {
+        gap: 50px;
+        padding: 0 30px 80px;
+    }
+
+    .musicas-destaque > div {
+        width: 250px;
+    }
+
+    .musicas-destaque img {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 0 40px;
+    }
+
+    .rodape {
+        padding: 60px;
+    }
+}
+
+
+/* =========================
+   ATÉ 768px
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* HEADER */
+
+    .cabecalho {
+        height: auto;
+        min-height: 100px;
+        padding: 20px 30px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .botao-logo img {
+        width: 150px;
+    }
+
+    .pesquisar {
+        order: 3;
+        width: 100%;
+    }
+
+    .perfil {
+        margin-left: auto;
+    }
+
+
+    /* ÁREA DO ÁLBUM */
+
+    .album-fundo {
+        height: 500px;
+    }
+
+    .album-fundo h2 {
+        left: 40px;
+        top: 40px;
+        width: 300px;
+        font-size: 28px;
+    }
+
+    .Criar-playlist {
+        left: 40px;
+        bottom: 35px;
+        font-size: 20px;
+    }
+
+    #fotinha {
+        width: 250px;
+        height: 250px;
+        right: 40px;
+        top: 150px;
+    }
+
+
+    /* TÍTULOS */
+
+    body > h1 {
+        font-size: 28px;
+        margin: 35px 0 25px;
+    }
+
+
+    /* ARTISTAS */
+
+    .artistas-alta,
+    .artistas-nacionais {
+        justify-content: flex-start;
+        gap: 30px;
+        padding: 0 30px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .artistas-alta > div,
+    .artistas-nacionais > div {
+        min-width: 130px;
+        width: 130px;
+    }
+
+    .artistas-alta > div > img,
+    .artistas-nacionais > div > img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .artistas-alta p,
+    .artistas-nacionais p {
+        font-size: 15px;
+    }
+
+
+    /* ESCONDER BARRA DE ROLAGEM */
+
+    .artistas-alta::-webkit-scrollbar,
+    .artistas-nacionais::-webkit-scrollbar,
+    .musicas-destaque::-webkit-scrollbar {
+        display: none;
+    }
+
+    .artistas-alta,
+    .artistas-nacionais,
+    .musicas-destaque {
+        scrollbar-width: none;
+    }
+
+
+    /* MÚSICAS */
+
+    .musicas-destaque {
+        justify-content: flex-start;
+        gap: 25px;
+        padding: 0 30px 60px;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .musicas-destaque > div {
+        min-width: 230px;
+        width: 230px;
+    }
+
+    .musicas-destaque img {
+        width: 230px;
+        height: 230px;
+    }
+
+    .musicas-destaque h2 {
+        font-size: 18px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 0 30px;
+    }
+
+    .rodape {
+        height: auto;
+        padding: 50px 40px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+
+/* =========================
+   ATÉ 500px
+   ========================= */
+
+@media (max-width: 500px) {
+
+    /* HEADER */
+
+    .cabecalho {
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .botao-logo img {
+        width: 130px;
+    }
+
+    .botao-entrar {
+        width: 80px;
+        height: 40px;
+        font-size: 1em;
+    }
+
+    .pesquisar {
+        height: 38px;
+        padding: 0 20px;
+    }
+
+    .pesquisar p {
+        font-size: 16px;
+    }
+
+
+    /* ÁREA DO ÁLBUM */
+
+    .album-fundo {
+        height: 470px;
+    }
+
+    .album-fundo h2 {
+        left: 25px;
+        top: 30px;
+        width: 230px;
+        font-size: 24px;
+    }
+
+    .Criar-playlist {
+        left: 25px;
+        bottom: 30px;
+        font-size: 18px;
+    }
+
+    #fotinha {
+        width: 210px;
+        height: 210px;
+        right: 25px;
+        top: 190px;
+    }
+
+
+    /* TÍTULOS */
+
+    body > h1 {
+        font-size: 24px;
+        margin: 30px 0 20px;
+    }
+
+
+    /* ARTISTAS */
+
+    .artistas-alta,
+    .artistas-nacionais {
+        gap: 25px;
+        padding: 0 20px;
+    }
+
+    .artistas-alta > div,
+    .artistas-nacionais > div {
+        min-width: 110px;
+        width: 110px;
+    }
+
+    .artistas-alta > div > img,
+    .artistas-nacionais > div > img {
+        width: 110px;
+        height: 110px;
+    }
+
+    .artistas-alta p,
+    .artistas-nacionais p {
+        font-size: 14px;
+    }
+
+
+    /* CORAÇÃO */
+
+    .botao-favorito {
+        width: 35px;
+        height: 35px;
+        bottom: 35px;
+    }
+
+
+    /* MÚSICAS */
+
+    .musicas-destaque {
+        gap: 20px;
+        padding: 0 20px 50px;
+    }
+
+    .musicas-destaque > div {
+        min-width: 190px;
+        width: 190px;
+    }
+
+    .musicas-destaque img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .musicas-destaque h2 {
+        font-size: 16px;
+    }
+
+    .musicas-destaque p {
+        font-size: 14px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 0 20px;
+    }
+
+    .rodape {
+        padding: 40px 25px;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .navs a {
+        font-size: 1em;
+    }
+}
