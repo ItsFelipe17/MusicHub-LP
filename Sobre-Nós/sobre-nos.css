@@ -1,0 +1,128 @@
+
+
+/* CABECALHO */
+
+.cabecalho {
+    background-color: var(--preto-profundo);
+    height: 100px;
+
+    padding: 0 105px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao-logo {
+    background: none;
+    border: none;
+
+    display: flex;
+
+    color: #FFFFFF;
+
+
+}
+
+.botao-logo img {
+    width: 200px;
+}
+
+.pesquisar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    padding: 0 35px 0;
+    background-color: #515757;
+
+    width: 550px;
+    height: 40px;
+}
+
+.pesquisar p {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 70%;
+}
+
+.lupa {
+    font-size: 20px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+
+/* NOSSA EQUIPE */
+
+.equipe {
+    background-image: url(../Sobre-Nós/imgs/mulher.fundo.svg);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+
+/* Sobre Nós */
+
+.sobre-nos {
+    align-items: center;
+    padding: 70px 105px 70px;
+
+}
+
+.sobre-nos h1 {
+    text-align: left;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/* RODAPE */
+
+
+ .footer {
+    padding: 0px 90px 20px;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    padding: 90px; 
+    border: 1px solid #FFFFFF;
+    height: 350px;
+}
+
+
+
+.navs {
+    display: grid;
+    gap: 15px;
+}
+
+.navs a {
+    text-decoration: none;
+    color: #FFFFFF85;
+    font-size: 1.2em;
+}
+
+.icones {
+    gap: 20px;
+}
