@@ -13,23 +13,25 @@
 
 <body>
     <!-- BARRA FRONTAL LOGIN -->
-    <header class="barra-login">
-        <div>
-        <button class="botao-filtro">
-            <i class="fa-solid fa-bars"></i>
+    <header class="cabecalho">
+        <button class="botao-logo">
+            <img src="../imagens/Group 239253.svg" alt="">
         </button>
 
-        <img src="/imagens/Logo-MusicHub.svg" alt="Logo-MusicHub" id="logo-musicHub">
-        MusicHub
-</div>
-        <div class="campo-busca">
-            <input type="text" placeholder="Pesquisar">
-            <i class="fa-solid fa-magnifying-glass"></i>
+        <div class="pesquisar">
+            <p>Pesquisar</p>
+
+            <div class="lupa">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
         </div>
 
-        <button class="botao-entrar">
-            Entrar
-        </button>
+        <div class="perfil">
+            <button class="botao-entrar">
+                Entrar
+            </button>
+        </div>
+
     </header>
 
     <section class="album-fundo">
@@ -42,62 +44,139 @@
     </section>
     <h1>Artistas em alta</h1>
     <div class="artistas-alta">
-<div>
-    <img src="/imagens/TRAVIS-BOLA.svg" alt="">
-    <p>Travis Scott</p>
+        <div>
+            <img src="/imagens/TRAVIS-BOLA.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Travis Scott</p>
+        </div>
+
+        <div>
+            <img src="/imagens/Justin-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Justin Bieber</p>
+        </div>
+
+        <div>
+            <img src="/imagens/The-weeknd.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>The Weekend</p>
+        </div>
+
+        <div>
+            <img src="/imagens/brunomars-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Bruno Mars</p>
+        </div>
+
+        <div>
+            <img src="/imagens/TaylorSwift-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Taylor Swift</p>
+        </div>
+
     </div>
 
-    <div>
-    <img src="/imagens/Justin-bola.svg" alt="">
-    <p>Justin Bieber</p>
+    <h1>Artistas nacionais</h1>
+    <div class="artistas-nacionais">
+        <div>
+            <img src="/imagens/henJu-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Henrique e Juliano</p>
+        </div>
+
+        <div>
+            <img src="/imagens/veigh-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Veigh</p>
+        </div>
+
+        <div>
+            <img src="/imagens/pericles-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Pericles</p>
+        </div>
+
+        <div>
+            <img src="/imagens/matue-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao" class="fa-solid fa-heart"></i>
+            </button>
+            <p>Matue</p>
+        </div>
+
+        <div>
+            <img src="/imagens/mariliaM-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao" class="fa-solid fa-heart"></i>
+            </button>
+            <p>Marília Mendonça</p>
+        </div>
+
     </div>
 
-    <div>
-    <img src="/imagens/The-weeknd.svg" alt="">
-    <p>The Weekend</p>
+    <h1>Músicas em destaque</h1>
+    <div class="musicas-destaque">
+        <div>
+            <img src="/imagens/Chuva-bencao.svg" alt="">
+            <h2>Chuva de benções</h2>
+            <p>Clayton & Romário</p>
+        </div>
+
+        <div>
+            <img src="/imagens/O-rosto.svg" alt="">
+            <h2>O Rosto e o Resto</h2>
+            <p>Grelo</p>
+        </div>
+
+        <div>
+            <img src="/imagens/Lembranca-boa.svg" alt="">
+            <h2>Lembrança Boa</h2>
+            <p>Pedro e Benicio</p>
+        </div>
+
+        <div>
+            <img src="/imagens/Principe-encantado.svg" alt="">
+            <h2>Príncipe encantado</h2>
+            <p>Canal do hit</p>
+        </div>
+
     </div>
+    <footer class="footer">
+        <div class="rodape">
 
-    <div>
-    <img src="/imagens/brunomars-bola.svg" alt="">
-    <p>Bruno Mars</p>
-    </div>
+            <nav class="empresa navs">
+                <h2>Empresa</h2>
+                <a href="">Sobre nós</a>
+                <a href="">Empregos</a>
+            </nav>
 
-    <div>
-    <img src="/imagens/TaylorSwift-bola.svg" alt="">
-    <p>Taylor Swift</p>
-    </div>
+            <nav class="comunidades navs">
+                <h2>Comunidades</h2>
+                <a href="">Para Artistas</a>
+                <a href="">Desenvolvedores</a>
+                <a href="">Publicidade</a>
+            </nav>
 
-</div> 
+            <nav class="links navs">
+                <h2>Links úteis</h2>
+                <a href="">Suporte</a>
+                <a href="">Letras das músicas mais ouvidas</a>
+                <a href="">Importar suas músicas</a>
+            </nav>
 
-<h1>Artistas nacionais</h1>
-<div class="artistas-nacionais">
-    <div>
-    <img src="/imagens/henJu-bola.svg" alt="">
-    <p>Henrique e Juliano</p>
-    </div>
-
-    <div>
-    <img src="/imagens/veigh-bola.svg" alt="">
-    <p>Veigh</p>
-    </div>
-
-    <div>
-    <img src="/imagens/pericles-bola.svg" alt="">
-    <p>Pericles</p>
-    </div>
-
-    <div>
-    <img src="/imagens/matue-bola.svg" alt="">
-    <p>Matue</p>
-    </div>
-
-    <div>
-    <img src="/imagens/mariliaM-bola.svg" alt="">
-    <p>Marília Mendonça</p>
-    </div>  
-
-</div>
-
+            <nav class="icones navs">
+                <img src="../imgs/Group 100.svg" alt="">
+                <img src="../imgs/Group 239250.svg" alt="">
+                <img src="../imgs/Group 239251.svg" alt="">
+            </nav>
+        </div>
+    </footer>
 </body>
 
 </html>
