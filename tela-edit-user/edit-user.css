@@ -13,89 +13,65 @@ body {
 /* CABEÇALHO */
 
 .cabecalho {
-    height: 72px;
-    padding: 0 3.6% 4px 8.9%;
     background-color: var(--preto-profundo);
+    height: 100px;
+
+    padding: 0 105px 0;
 
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.logo {
-    width: 32%;
-    display: flex;
-    align-items: center;
-    gap: 0;
+.botao-logo {
+    background: none;
+    border: none;
 
-    color: var(--gelo-branco);
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 700;
+    display: flex;
+
+    color: #FFFFFF;
+
+
 }
 
-.logo img {
-    width: 50px;
-    height: 50px;
-    transform: translateY(-5px);
+.botao-logo img {
+    width: 200px;
 }
 
 .pesquisar {
-    width: 32%;
-    height: 39px;
-    padding: 0 20px 0 24px;
-    border-radius: 8px;
-    background-color: var(--cinza-grafite);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
+    border-radius: 10px;
+    padding: 0 35px 0;
+    background-color: #515757;
+
+    width: 550px;
+    height: 40px;
+}
+
+.pesquisar p {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 70%;
+}
+
+.lupa {
+    font-size: 20px;
+    padding: 2% 0 0;
+}
+
+.perfil {
     display: flex;
     align-items: center;
-    gap: 15px;
-}
 
-.pesquisar input {
-    flex: 1;
-    width: 100%;
-    min-width: 0;
-    border: none;
-    outline: none;
-    background-color: transparent;
-
-    color: var(--gelo-branco);
-    font-family: inherit;
-    font-size: 18px;
-    font-weight: 500;
-}
-
-.pesquisar input::placeholder {
-    color: #a1a1aa;
-}
-
-.botao-pesquisar img {
-    width: 20px;
-    height: 20px;
-}
-
-.perfil-topo {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 16px;
-
-    color: var(--gelo-branco);
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 700;
-}
-
-.perfil-topo img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+    gap: 20px;
 }
 
 /* CARTÃO E IDENTIFICAÇÃO DO USUÁRIO */
 
-.perfil {
+.perfil1 {
     width: 85%;
     max-width: 1200px;
     min-height: 700px;
@@ -210,9 +186,9 @@ body {
 }
 
 .campo-com-seta {
+    position: relative;
     display: flex;
     align-items: center;
-    padding-right: 14px;
     border: 1px solid #dedede;
     border-radius: 6px;
     background-color: #f8f8f8;
@@ -222,19 +198,29 @@ body {
     flex: 1;
     min-width: 0;
     height: 36px;
+    padding-right: 40px; /* espaço para a seta */
     border: none;
     background-color: transparent;
-}
-
-.campo-com-seta select {
     appearance: none;
     cursor: pointer;
 }
 
 .seta {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
     color: #777e82;
     font-size: 20px;
-    margin-top: -8px;
+
+    pointer-events: none; /* pesquisei, sem o JS só com pointer-events */
+    transition: transform 0.2s ease;
+}
+
+/* seta invertida enquanto o select está com foco (menu aberto) */
+.campo-com-seta select:focus + .seta {
+    transform: translateY(-50%) rotate(180deg);
 }
 
 /* ENDEREÇO DE E-MAIL */
@@ -315,4 +301,229 @@ body {
     font-family: inherit;
     font-size: 12px;
     cursor: pointer;
+}
+
+
+
+/* Responsividade */
+
+/* =========================
+   RESPONSIVIDADE 1024px
+========================= */
+
+@media screen and (max-width: 1024px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        padding: 0 40px;
+        gap: 25px;
+    }
+
+    .botao-logo img {
+        width: 160px;
+    }
+
+    .pesquisar {
+        width: 40%;
+        padding: 0 20px;
+    }
+
+    .perfil {
+        gap: 10px;
+    }
+
+    .perfil h2 {
+        font-size: 1.2em;
+    }
+
+    /* CARTÃO DO PERFIL */
+
+    .perfil1 {
+        width: 90%;
+        min-height: 0;
+        margin: 50px auto;
+        padding: 30px;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE 768px
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    /* FUNDO: o "fixed" costuma travar/cortar em celulares */
+
+    body {
+        background-attachment: scroll;
+    }
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        height: auto;
+        min-height: 90px;
+        padding: 20px 25px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .botao-logo img {
+        width: 140px;
+    }
+
+    .perfil {
+        margin-left: auto;
+    }
+
+    .perfil h2 {
+        font-size: 1em;
+    }
+
+    .perfil img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .pesquisar {
+        order: 3;
+        width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+    }
+
+    /* CARTÃO DO PERFIL */
+
+    .perfil1 {
+        width: 92%;
+        margin: 30px auto;
+        padding: 25px 20px;
+    }
+
+    .topo-perfil {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .botoes {
+        width: 100%;
+    }
+
+    .botao-salvar,
+    .botao-sair {
+        flex: 1;
+        width: auto;
+        margin-top: 0;
+        height: 38px;
+    }
+
+    /* FORMULÁRIO: 1 coluna */
+
+    .formulario-perfil {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* E-MAIL */
+
+    .area-email {
+        margin-top: 40px;
+    }
+
+    .endereco-email {
+        overflow-wrap: anywhere;
+    }
+
+    .email-cadastrado {
+        align-items: flex-start;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE 500px
+========================= */
+
+@media screen and (max-width: 500px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .botao-logo img {
+        width: 120px;
+    }
+
+    .perfil {
+        gap: 8px;
+    }
+
+    .perfil h2 {
+        font-size: 0.9em;
+    }
+
+    .perfil img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .pesquisar {
+        padding: 0 15px;
+        height: 38px;
+    }
+
+    .pesquisar p {
+        font-size: 16px;
+    }
+
+    .lupa {
+        font-size: 16px;
+    }
+
+    /* CARTÃO DO PERFIL */
+
+    .perfil1 {
+        width: 94%;
+        margin: 20px auto;
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .dados-usuario {
+        gap: 15px;
+    }
+
+    .foto-usuario {
+        width: 56px;
+        height: 58px;
+    }
+
+    .identificacao p {
+        overflow-wrap: anywhere;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .botao-salvar,
+    .botao-sair {
+        width: 100%;
+    }
+
+    /* E-MAIL */
+
+    .area-email {
+        margin-top: 30px;
+    }
+
+    .botao-adicionar {
+        margin: 20px 0 0 0;
+        width: 100%;
+    }
 }
