@@ -285,34 +285,34 @@ body {
 
 /* RODAPE */
 
-.footer {
-    padding: 0 90px 0;
-}
+    .footer {
+        padding: 0 90px 0;
+    }
 
-.rodape {
-    display: flex;
-    justify-content: space-between;
-    padding: 90px; 
-    border: 1px solid #FFFFFF;
-    height: 350px;
-}
+    .rodape {
+        display: flex;
+        justify-content: space-between;
+        padding: 90px; 
+        border: 1px solid #FFFFFF;
+        height: 350px;
+    }
 
 
 
-.navs {
-    display: grid;
-     gap: 15px;
-}
+    .navs {
+        display: grid;
+        gap: 15px;
+    }
 
-.navs a {
-    text-decoration: none;
-    color: #FFFFFF85;
-    font-size: 1.2em;
-}
+    .navs a {
+        text-decoration: none;
+        color: #FFFFFF85;
+        font-size: 1.2em;
+    }
 
-.icones {
-    gap: 20px;
-}
+    .icones {
+        gap: 20px;
+    }
 
 /* =========================
    RESPONSIVIDADE 1024px
