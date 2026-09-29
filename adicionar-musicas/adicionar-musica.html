@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../global.css">
+    <link rel="stylesheet" href="../adicionar-musicas/adicionar-musica.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>Adicionar música | MusicHub</title>
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+
+    <header class="cabecalho">
+        <a class="botao-logo" href="../Home/home.html">
+            <img src="imgs/Logo principal.svg" alt="MusicHub">
+        </a>
+
+        <form class="pesquisar" role="search">
+            <input type="search" id="pesquisa" placeholder="Pesquisar" aria-label="Pesquisar">
+
+            <button class="lupa" type="submit" aria-label="Buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </form>
+
+        <div class="perfil">
+            <h2>Seu Perfil</h2>
+            <img src="imgs/Foto de perfil- Brian.svg" alt="Foto de perfil de Brian">
+        </div>
+    </header>
+
+    <!-- CARTÃO ADICIONAR MÚSICA -->
+    <main>
+        <section class="cartao" aria-labelledby="titulo-pagina">
+            <h1 id="titulo-pagina">Adicionar música</h1>
+
+            <form class="formulario-musica" action="#" method="post" enctype="multipart/form-data">
+
+                <div class="campo">
+                    <label for="autor">Autor</label>
+                    <input type="text" id="autor" name="autor" placeholder="Digite o nome do autor...">
+                </div>
+
+                <div class="campo">
+                    <label for="album">Adicionar álbum</label>
+                    <div class="campo-com-seta">
+                        <select id="album" name="album">
+                            <option value="">Nenhum</option>
+                        </select>
+                        <span class="seta" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="nome-musica">Nome da música</label>
+                    <input type="text" id="nome-musica" name="nome" placeholder="Digite o título da faixa...">
+                </div>
+
+                <div class="campo">
+                    <label for="genero">Gênero musical</label>
+                    <div class="campo-com-seta">
+                        <select id="genero" name="genero">
+                            <option value="" disabled selected>Selecione um gênero</option>
+                            <option value="pop">Pop</option>
+                            <option value="rock">Rock</option>
+                            <option value="hiphop">Hip-hop</option>
+                            <option value="eletronica">Eletrônica</option>
+                            <option value="sertanejo">Sertanejo</option>
+                            <option value="mpb">MPB</option>
+                        </select>
+                        <span class="seta" aria-hidden="true"><i class="fa-solid fa-chevron-down"></i></span>
+                    </div>
+                </div>
+
+                <div class="upload">
+                    <h2>Capa da música</h2>
+                    <input type="file" id="capa" name="capa" accept="image/*" hidden>
+                    <label class="upload-caixa" for="capa">
+                        <img src="imgs/ícone-camera.svg" alt="">
+                        <span>Carregar arquivo</span>
+                    </label>
+                </div>
+
+                <div class="upload">
+                    <h2>Arquivo da música</h2>
+                    <input type="file" id="arquivo" name="arquivo" accept="audio/*" hidden>
+                    <label class="upload-caixa" for="arquivo">
+                        <img src="imgs/ícone-pasta com musica.svg" alt="">
+                        <span>Carregar arquivo</span>
+                    </label>
+                </div>
+
+                <button class="botao-adicionar" type="submit">Adicionar música</button>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

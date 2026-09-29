@@ -1,0 +1,529 @@
+/* FUNDO DA PÁGINA */
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(imgs/tela-edit-user.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    background-color: var(--preto-profundo);
+    height: 100px;
+
+    padding: 0 105px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao-logo {
+    background: none;
+    border: none;
+
+    display: flex;
+
+    color: #FFFFFF;
+
+
+}
+
+.botao-logo img {
+    width: 200px;
+}
+
+.pesquisar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    padding: 0 35px 0;
+    background-color: #515757;
+
+    width: 550px;
+    height: 40px;
+}
+
+.pesquisar p {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 70%;
+}
+
+.lupa {
+    font-size: 20px;
+    padding: 2% 0 0;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+/* CARTÃO E IDENTIFICAÇÃO DO USUÁRIO */
+
+.perfil1 {
+    width: 85%;
+    max-width: 1200px;
+    min-height: 700px;
+    margin: 75px auto;
+    padding: 35px 40px;
+    border-radius: 16px;
+    background-color: var(--preto-profundo);
+}
+
+.topo-perfil {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.dados-usuario {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.foto-usuario {
+    width: 70px;
+    height: 72px;
+    border-radius: 50%;
+}
+
+.identificacao h1 {
+    margin-bottom: 3px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.identificacao p {
+    color: #8d8d8d;
+    font-size: 12px;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao-sair {
+    width: 108px;
+    height: 32px;
+    margin-top: 9px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f94144;
+    color: var(--gelo-branco);
+
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.botao-salvar {
+    width: 108px;
+    height: 32px;
+    margin-top: 9px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--azul-escuro);
+    color: var(--gelo-branco);
+
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* FORMULÁRIO EM DUAS COLUNAS */
+
+.formulario-perfil {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 23px;
+
+    padding-bottom: 17px;
+    border-bottom: 2px solid var(--azul-escuro);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campo label {
+    color: #c7c7c7;
+    font-size: 12px;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    height: 38px;
+    padding: 0 14px;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+
+    font-family: inherit;
+    font-size: 12px;
+    color: #969696;
+}
+
+.campo input::placeholder {
+    color: #969696;
+}
+
+.campo-com-seta {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dedede;
+    border-radius: 6px;
+    background-color: #f8f8f8;
+}
+
+.campo-com-seta select {
+    flex: 1;
+    min-width: 0;
+    height: 36px;
+    padding-right: 40px; /* espaço para a seta */
+    border: none;
+    background-color: transparent;
+    appearance: none;
+    cursor: pointer;
+}
+
+.seta {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 1;
+    color: #777e82;
+    font-size: 20px;
+
+    pointer-events: none; /* pesquisei, sem o JS só com pointer-events */
+    transition: transform 0.2s ease;
+}
+
+/* seta invertida enquanto o select está com foco (menu aberto) */
+.campo-com-seta select:focus + .seta {
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* ENDEREÇO DE E-MAIL */
+
+.area-email {
+    margin-top: 58px;
+}
+
+.area-email h2 {
+    margin-bottom: 13px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.email-cadastrado {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.icone-email {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #1e2837;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-email img {
+    width: 15px;
+    height: 13px;
+}
+
+.endereco-email {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 12px;
+}
+
+.botao-remover {
+    width: 18px;
+    height: 18px;
+    border: none;
+    border-radius: 50%;
+    background-color: #1e2837;
+    color: #ff565e;
+    font-size: 24px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-remover span {
+    font-size: 20px;
+    transform: translateY(1px);
+}
+
+.tempo-email {
+    margin-top: 5px;
+    color: #8d8d8d;
+    font-size: 12px;
+}
+
+.botao-adicionar {
+    margin: 20px 0 0 27px;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #1e2837;
+    color: #4182f9;
+
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+
+/* Responsividade */
+
+/* =========================
+   RESPONSIVIDADE 1024px
+========================= */
+
+@media screen and (max-width: 1024px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        padding: 0 40px;
+        gap: 25px;
+    }
+
+    .botao-logo img {
+        width: 160px;
+    }
+
+    .pesquisar {
+        width: 40%;
+        padding: 0 20px;
+    }
+
+    .perfil {
+        gap: 10px;
+    }
+
+    .perfil h2 {
+        font-size: 1.2em;
+    }
+
+    /* CARTÃO DO PERFIL */
+
+    .perfil1 {
+        width: 90%;
+        min-height: 0;
+        margin: 50px auto;
+        padding: 30px;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE 768px
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    /* FUNDO: o "fixed" costuma travar/cortar em celulares */
+
+    body {
+        background-attachment: scroll;
+    }
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        height: auto;
+        min-height: 90px;
+        padding: 20px 25px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .botao-logo img {
+        width: 140px;
+    }
+
+    .perfil {
+        margin-left: auto;
+    }
+
+    .perfil h2 {
+        font-size: 1em;
+    }
+
+    .perfil img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .pesquisar {
+        order: 3;
+        width: 100%;
+        height: 40px;
+        box-sizing: border-box;
+    }
+
+    /* CARTÃO DO PERFIL */
+
+    .perfil1 {
+        width: 92%;
+        margin: 30px auto;
+        padding: 25px 20px;
+    }
+
+    .topo-perfil {
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .botoes {
+        width: 100%;
+    }
+
+    .botao-salvar,
+    .botao-sair {
+        flex: 1;
+        width: auto;
+        margin-top: 0;
+        height: 38px;
+    }
+
+    /* FORMULÁRIO: 1 coluna */
+
+    .formulario-perfil {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    /* E-MAIL */
+
+    .area-email {
+        margin-top: 40px;
+    }
+
+    .endereco-email {
+        overflow-wrap: anywhere;
+    }
+
+    .email-cadastrado {
+        align-items: flex-start;
+    }
+}
+
+/* =========================
+   RESPONSIVIDADE 500px
+========================= */
+
+@media screen and (max-width: 500px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho {
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .botao-logo img {
+        width: 120px;
+    }
+
+    .perfil {
+        gap: 8px;
+    }
+
+    .perfil h2 {
+        font-size: 0.9em;
+    }
+
+    .perfil img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .pesquisar {
+        padding: 0 15px;
+        height: 38px;
+    }
+
+    .pesquisar p {
+        font-size: 16px;
+    }
+
+    .lupa {
+        font-size: 16px;
+    }
+
+    /* CARTÃO DO PERFIL */
+
+    .perfil1 {
+        width: 94%;
+        margin: 20px auto;
+        padding: 20px 15px;
+        border-radius: 12px;
+    }
+
+    .dados-usuario {
+        gap: 15px;
+    }
+
+    .foto-usuario {
+        width: 56px;
+        height: 58px;
+    }
+
+    .identificacao p {
+        overflow-wrap: anywhere;
+    }
+
+    .botoes {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .botao-salvar,
+    .botao-sair {
+        width: 100%;
+    }
+
+    /* E-MAIL */
+
+    .area-email {
+        margin-top: 30px;
+    }
+
+    .botao-adicionar {
+        margin: 20px 0 0 0;
+        width: 100%;
+    }
+}
