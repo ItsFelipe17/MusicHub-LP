@@ -19,15 +19,17 @@
         </button>
 
         <div class="pesquisar">
-            <p>Pesquisar</p>
+            <input type="text" id="campoPesquisa" placeholder="Pesquisar" autocomplete="off">
 
-            <div class="lupa">
+            <button id="botaoPesquisa" type="button">
                 <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+            </button>
+
+            <div id="resultadosPesquisa" class="resultados-pesquisa"></div>
         </div>
 
         <div class="perfil">
-            <button class="botao-entrar">
+            <button class="botao-entrar" id="botaoEntrar">
                 Entrar
             </button>
         </div>
@@ -177,6 +179,21 @@
             </nav>
         </div>
     </footer>
+    <div id="playerContainer" class="player-container">
+    <button id="fecharPlayer" class="fechar-player" type="button" aria-label="Fechar player">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <iframe
+        id="playerSpotify"
+        title="Player do Spotify"
+        width="100%"
+        height="80"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+    </iframe>
+</div>
+    <script src="home.js"></script>
 </body>
 
 </html>
