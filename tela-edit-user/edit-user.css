@@ -118,17 +118,23 @@ body {
 }
 
 .botao-sair {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    border-radius: 8px;
+    
     width: 108px;
     height: 32px;
     margin-top: 9px;
-    border: none;
-    border-radius: 6px;
-    background-color: #f94144;
+    
+    background-color: #ff4d4d;
     color: var(--gelo-branco);
+
 
     font-family: inherit;
     font-size: 12px;
-    cursor: pointer;
 }
 
 .botao-salvar {
@@ -142,7 +148,7 @@ body {
 
     font-family: inherit;
     font-size: 12px;
-    cursor: pointer;
+
 }
 
 /* FORMULÁRIO EM DUAS COLUNAS */
@@ -198,7 +204,8 @@ body {
     flex: 1;
     min-width: 0;
     height: 36px;
-    padding-right: 40px; /* espaço para a seta */
+    padding-right: 40px;
+    /* espaço para a seta */
     border: none;
     background-color: transparent;
     appearance: none;
@@ -214,12 +221,13 @@ body {
     color: #777e82;
     font-size: 20px;
 
-    pointer-events: none; /* pesquisei, sem o JS só com pointer-events */
+    pointer-events: none;
+    /* pesquisei, sem o JS só com pointer-events */
     transition: transform 0.2s ease;
 }
 
 /* seta invertida enquanto o select está com foco (menu aberto) */
-.campo-com-seta select:focus + .seta {
+.campo-com-seta select:focus+.seta {
     transform: translateY(-50%) rotate(180deg);
 }
 
