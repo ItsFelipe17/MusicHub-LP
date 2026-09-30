@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicHub</title>
+    <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="home.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body>
+    <!-- BARRA FRONTAL LOGIN -->
+    <header class="cabecalho">
+        <button class="botao-logo">
+            <img src="../Home/imagens/Group 239253.svg" alt="">
+        </button>
+
+        <div class="pesquisar">
+            <input type="text" id="campoPesquisa" placeholder="Pesquisar" autocomplete="off">
+
+            <button id="botaoPesquisa" type="button">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <div id="resultadosPesquisa" class="resultados-pesquisa"></div>
+        </div>
+
+        <div class="perfil">
+            <button class="botao-entrar" id="botaoEntrar">
+                Entrar
+            </button>
+        </div>
+
+    </header>
+
+    <section class="album-fundo">
+        <img src="../Home/imagens/Foto-album.svg" alt="" id="fundo-desfoque">
+        <h2>Acompanhe os lançamentos dos seus artistas favoritos</h2>
+        <button class="Criar-playlist">
+            Criar playlist
+        </button>
+        <img src="../Home/imagens/Foto-album.svg" alt="" id="fotinha">
+    </section>
+    <h1>Artistas em alta</h1>
+    <div class="artistas-alta">
+        <div>
+            <img src="../Home/imagens/TRAVIS-BOLA.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Travis Scott</p>
+        </div>
+
+        <div>
+            <img src="../Home/imagens/Justin-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Justin Bieber</p>
+        </div>
+
+        <div>
+            <img src="../Home/imagens/The-weeknd.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>The Weekend</p>
+        </div>
+
+        <div>
+            <img src="../Home/imagens/brunomars-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Bruno Mars</p>
+        </div>
+
+        <div>
+            <img src="../Home/imagens/TaylorSwift-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Taylor Swift</p>
+        </div>
+
+    </div>
+
+    <h1>Artistas nacionais</h1>
+    <div class="artistas-nacionais">
+        <div>
+            <img src="../Home/imagens/henJu-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Henrique e Juliano</p>
+        </div>
+
+        <div>
+            <img src="../Home/imagens/veigh-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Veigh</p>
+        </div>
+
+        <div>
+            <img src="../Home/imagens/pericles-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao"
+                    class="fa-solid fa-heart"></i></button>
+            <p>Pericles</p>
+        </div>
+
+        <div>
+            <img src="../Home/imagens/matue-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao" class="fa-solid fa-heart"></i>
+            </button>
+            <p>Matue</p>
+        </div>
+
+        <div>
+            <img src="../Home/imagens/mariliaM-bola.svg" alt="">
+            <button class="botao-favorito botao-interativo"><i id="icone-coracao" class="fa-solid fa-heart"></i>
+            </button>
+            <p>Marília Mendonça</p>
+        </div>
+
+    </div>
+
+    <h1>Músicas em destaque</h1>
+    <div class="musicas-destaque">
+        <div>
+            <img src="../Home/imagens/Chuva-bencao.svg" alt="">
+            <h2>Chuva de benções</h2>
+            <p>Clayton & Romário</p>
+        </div>
+
+        <div>
+            <img src="../Home/imagens/O-rosto.svg" alt="">
+            <h2>O Rosto e o Resto</h2>
+            <p>Grelo</p>
+        </div>
+
+        <div>
+            <img src="../Home/imagens/Lembranca-boa.svg" alt="">
+            <h2>Lembrança Boa</h2>
+            <p>Pedro e Benicio</p>
+        </div>
+
+        <div>
+            <img src="../Home/imagens/Principe-encantado.svg" alt="">
+            <h2>Príncipe encantado</h2>
+            <p>Canal do hit</p>
+        </div>
+
+    </div>
+    <footer class="footer">
+        <div class="rodape">
+
+            <nav class="empresa navs">
+                <h2>Empresa</h2>
+                <a href="">Sobre nós</a>
+                <a href="">Empregos</a>
+            </nav>
+
+            <nav class="comunidades navs">
+                <h2>Comunidades</h2>
+                <a href="">Para Artistas</a>
+                <a href="">Desenvolvedores</a>
+                <a href="">Publicidade</a>
+            </nav>
+
+            <nav class="links navs">
+                <h2>Links úteis</h2>
+                <a href="">Suporte</a>
+                <a href="">Letras das músicas mais ouvidas</a>
+                <a href="">Importar suas músicas</a>
+            </nav>
+
+            <nav class="icones navs">
+                <img src="../imgs/Group 100.svg" alt="">
+                <img src="../imgs/Group 239250.svg" alt="">
+                <img src="../imgs/Group 239251.svg" alt="">
+            </nav>
+        </div>
+    </footer>
+    <div id="playerContainer" class="player-container">
+    <button id="fecharPlayer" class="fechar-player" type="button" aria-label="Fechar player">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+    <iframe
+        id="playerSpotify"
+        title="Player do Spotify"
+        width="100%"
+        height="80"
+        frameborder="0"
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+    </iframe>
+</div>
+    <script src="home.js"></script>
+</body>
+
+</html>

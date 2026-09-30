@@ -1,0 +1,516 @@
+
+
+/* CABECALHO */
+
+.cabecalho {
+    background-color: var(--preto-profundo);
+    height: 100px;
+
+    padding: 0 105px 0;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botao-logo {
+    background: none;
+    border: none;
+
+    display: flex;
+
+    color: #FFFFFF;
+
+
+}
+
+.botao-logo img {
+    width: 200px;
+}
+
+.pesquisar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    padding: 0 35px 0;
+    background-color: #515757;
+
+    width: 550px;
+    height: 40px;
+}
+
+.pesquisar p {
+    font-size: 20px;
+    font-weight: 400;
+    opacity: 70%;
+}
+
+.lupa {
+    font-size: 20px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+}
+
+
+
+/* NOSSA EQUIPE */
+
+.equipe {
+    background-image: url(../Sobre-Nós/imgs/mulher.fundo.svg);
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+
+/* Sobre Nós */
+
+.sobre-nos {
+    align-items: center;
+    padding: 70px 105px 70px;
+
+}
+
+.sobre-nos h1 {
+    text-align: left;
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.foto-pessoa {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 1px solid var(--preto-profundo);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 5px;
+}
+
+.foto1 {
+    background-image: url(../Sobre-Nós/imgs/augusto.svg);
+}
+
+.foto2 {
+    background-image: url(../Sobre-Nós/imgs/gustavo.svg);
+}
+
+.foto3 {
+    background-image: url(../Sobre-Nós/imgs/matheus.svg);
+}
+
+.foto4 {
+    background-image: url(../Sobre-Nós/imgs/felipe.svg);
+}
+
+.foto5 {
+    background-image: url(../Sobre-Nós/imgs/leandro.svg);
+}
+
+.foto6 {
+    background-image: url(../Sobre-Nós/imgs/pedro.svg);
+}
+
+.pessoa {
+    display: grid;
+    justify-content: center;
+}
+
+.pessoa p {
+    text-align: center;
+    font-weight: 200;
+    margin-bottom: 15px;
+}
+
+.cards {
+    display: flex;
+    gap: 15px;
+}
+
+.equipe {
+    padding: 25px 120px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.equipe > h1 {
+    font-size: 4em;
+    width: 700px;
+}
+
+.equipe h1 {
+    font-weight: 300;
+}
+
+.nossa-equipe h1 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+
+/* RODAPE */
+
+
+ .footer {
+    padding: 0px 90px 20px;
+}
+
+.rodape {
+    display: flex;
+    justify-content: space-between;
+    padding: 90px; 
+    border: 1px solid #FFFFFF;
+    height: 350px;
+}
+
+
+
+.navs {
+    display: grid;
+    gap: 15px;
+}
+
+.navs a {
+    text-decoration: none;
+    color: #FFFFFF85;
+    font-size: 1.2em;
+}
+
+.icones {
+    gap: 20px;
+}
+
+
+
+
+
+/* =====================================================
+   RESPONSIVIDADE - 1024px
+   ===================================================== */
+
+@media (max-width: 1024px) {
+
+    /* CABEÇALHO */
+    .cabecalho {
+        padding: 0 50px;
+        height: 90px;
+    }
+
+    .botao-logo img {
+        width: 170px;
+    }
+
+    .pesquisar {
+        width: 350px;
+        padding: 0 25px;
+    }
+
+    .perfil {
+        gap: 10px;
+    }
+
+    .perfil h2 {
+        font-size: 18px;
+    }
+
+
+    /* NOSSA EQUIPE */
+    .equipe {
+        padding: 30px 50px 0;
+        height: auto;
+        min-height: 70vh;
+        gap: 30px;
+    }
+
+    .equipe > h1 {
+        font-size: 3em;
+        width: 50%;
+    }
+
+    .nossa-equipe {
+        width: 45%;
+    }
+
+    .nossa-equipe h1 {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .cards {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .foto-pessoa {
+        width: 110px;
+        height: 110px;
+    }
+
+    .pessoa p {
+        font-size: 14px;
+    }
+
+
+    /* SOBRE NÓS */
+    .sobre-nos {
+        padding: 60px 50px;
+    }
+
+    .sobre-nos h1 {
+        font-size: 1.6em;
+    }
+
+
+    /* RODAPÉ */
+    .footer {
+        padding: 0 50px 20px;
+    }
+
+    .rodape {
+        padding: 60px;
+        height: auto;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE - 768px
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* CABEÇALHO */
+    .cabecalho {
+        padding: 0 30px;
+        height: 80px;
+    }
+
+    .botao-logo img {
+        width: 150px;
+    }
+
+    .pesquisar {
+        width: 250px;
+        height: 36px;
+        padding: 0 18px;
+    }
+
+    .pesquisar p {
+        font-size: 16px;
+    }
+
+    .lupa {
+        font-size: 16px;
+    }
+
+    .perfil h2 {
+        display: none;
+    }
+
+
+    /* NOSSA EQUIPE */
+    .equipe {
+        padding: 40px 30px;
+        min-height: auto;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .equipe > h1 {
+        width: 100%;
+        font-size: 3em;
+        margin: 0;
+        text-align: center;
+    }
+
+    .nossa-equipe {
+        width: 100%;
+    }
+
+    .nossa-equipe h1 {
+        font-size: 2em;
+    }
+
+    .cards {
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .pessoas-esquerda,
+    .pessoas-direita {
+        width: 50%;
+    }
+
+    .foto-pessoa {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    /* SOBRE NÓS */
+    .sobre-nos {
+        padding: 50px 30px;
+    }
+
+    .sobre-nos h1 {
+        font-size: 1.4em;
+        line-height: 1.5;
+    }
+
+
+    /* RODAPÉ */
+    .footer {
+        padding: 0 30px 20px;
+    }
+
+    .rodape {
+        padding: 40px;
+        height: auto;
+        gap: 40px;
+        flex-wrap: wrap;
+    }
+
+    .navs {
+        min-width: 40%;
+    }
+}
+
+
+/* =====================================================
+   RESPONSIVIDADE - 500px
+   ===================================================== */
+
+@media (max-width: 500px) {
+
+    /* CABEÇALHO */
+    .cabecalho {
+        height: 70px;
+        padding: 0 20px;
+    }
+
+    .botao-logo img {
+        width: 130px;
+    }
+
+    .pesquisar {
+        display: flex;
+        width: 125px;
+        height: 35px;
+        padding: 0 10px;
+        flex-shrink: 1;
+    }
+
+    .pesquisar p {
+        font-size: 12px;
+    }
+
+    .lupa {
+        font-size: 13px;
+    }
+
+    .perfil img {
+        width: 40px;
+        height: 40px;
+    }
+
+
+    /* NOSSA EQUIPE */
+    .equipe {
+        padding: 40px 20px;
+        gap: 45px;
+        background-position: center;
+    }
+
+    .equipe > h1 {
+        width: 100%;
+        font-size: 2.2em;
+        line-height: 1.2;
+        text-align: left;
+    }
+
+    .nossa-equipe {
+        width: 100%;
+    }
+
+    .nossa-equipe h1 {
+        font-size: 1.8em;
+        margin-bottom: 25px;
+    }
+
+    .cards {
+        display: flex;
+        gap: 10px;
+    }
+
+    .pessoas-esquerda,
+    .pessoas-direita {
+        width: 50%;
+    }
+
+    .foto-pessoa {
+        width: 90px;
+        height: 90px;
+    }
+
+    .pessoa p {
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+
+
+    /* SOBRE NÓS */
+    .sobre-nos {
+        padding: 40px 20px;
+    }
+
+    .sobre-nos h1 {
+        font-size: 1.15em;
+        line-height: 1.5;
+        margin-bottom: 30px;
+    }
+
+
+    /* RODAPÉ */
+    .footer {
+        padding: 0 20px 20px;
+    }
+
+    .rodape {
+        padding: 35px 25px;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .navs {
+        gap: 10px;
+    }
+
+    .navs h2 {
+        font-size: 1.2em;
+    }
+
+    .navs a {
+        font-size: 1em;
+    }
+
+    .icones {
+        display: flex;
+    }
+}
+
+/* Finalizado */
