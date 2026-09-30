@@ -59,8 +59,8 @@ body {
 
 .lupa {
     font-size: 20px;
-    padding: 2% 0 0;
 }
+
 
 .perfil {
     display: flex;
@@ -124,11 +124,11 @@ body {
 
     text-decoration: none;
     border-radius: 8px;
-    
+
     width: 108px;
     height: 32px;
     margin-top: 9px;
-    
+
     background-color: #ff4d4d;
     color: var(--gelo-branco);
 
@@ -485,11 +485,13 @@ body {
     }
 
     .pesquisar p {
-        font-size: 16px;
+        font-size: 20px;
+        font-weight: 400;
+        opacity: 70%;
     }
 
     .lupa {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     /* CARTÃO DO PERFIL */
