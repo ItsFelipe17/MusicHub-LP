@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background: #1b1b1b;
+}
+
+button {
+    font-family: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    background: #1b1b1b;
+    color: #ffffff;
+}
+
+.pagina {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== Cabeçalho ===== */
+.cabecalho {
+    height: 52px;
+    padding: 0 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.botao-logo {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    cursor: pointer;
+}
+
+.botao-logo img {
+    height: 24px;
+}
+
+.pesquisar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+    height: 22px;
+    padding: 0 8px;
+    border-radius: 6px;
+    background-color: #515757;
+}
+
+.pesquisar p {
+    margin: 0;
+    font-size: 9px;
+    opacity: 70%;
+}
+
+.lupa {
+    font-size: 9px;
+    padding-left: 6px;
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.perfil h2 {
+    margin: 0;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+.perfil img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ===== Banner ===== */
+.banner {
+    position: relative;
+    height: 136px;
+    overflow: hidden;
+    background: #3a2a26;
+}
+
+.imagem-banner {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    display: block;
+}
+
+.titulo-banner {
+    position: absolute;
+    left: 14px;
+    bottom: 22px;
+    margin: 0;
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* ===== Seções ===== */
+.secao {
+    padding: 22px 12px 0;
+}
+
+.titulo-secao {
+    display: inline-block;
+    margin: 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #fff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.subtitulo-secao {
+    margin: 8px 0 14px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.capa-card {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    display: block;
+    background: #333;
+}
+
+.nome-card {
+    margin: 8px 0 0;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.25;
+    text-align: center;
+}
+
+/* ===== Rodapé ===== */
+.rodape {
+    margin-top: 24px;
+    padding: 16px 20px 32px;
+}
+
+.caixa-rodape {
+    border: 1px solid #5a5a5a;
+    padding: 20px 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px 14px;
+}
+
+.coluna-rodape {
+    min-width: 90px;
+}
+
+.coluna-rodape h4 {
+    margin: 0 0 8px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.coluna-rodape a {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 10px;
+    color: #cfcfcf;
+    text-decoration: none;
+}
+
+.coluna-rodape a:hover {
+    color: #fff;
+}
+
+.redes-rodape {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.redes-rodape a {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* ===== Desktop ===== */
+@media (min-width: 900px) {
+    .cabecalho {
+        height: 100px;
+        padding: 0 105px;
+    }
+
+    .botao-logo img {
+        height: 44px;
+    }
+
+    .pesquisar {
+        width: 550px;
+        height: 40px;
+        padding: 0 35px;
+        border-radius: 10px;
+    }
+
+    .pesquisar p,
+    .lupa {
+        font-size: 20px;
+    }
+
+    .lupa {
+        padding-left: 16px;
+    }
+
+    .perfil h2 {
+        font-size: 20px;
+    }
+
+    .perfil img {
+        width: 48px;
+        height: 48px;
+    }
+
+    .banner {
+        height: 380px;
+    }
+
+    .titulo-banner {
+        left: 56px;
+        bottom: 48px;
+        font-size: 56px;
+    }
+
+    .secao {
+        padding: 40px 56px 0;
+    }
+
+    .titulo-secao {
+        font-size: 32px;
+        padding-bottom: 10px;
+    }
+
+    .subtitulo-secao {
+        font-size: 18px;
+        margin: 12px 0 24px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 350px);
+        justify-content: space-between;
+        gap: 32px;
+    }
+
+    .capa-card {
+        width: 350px;
+        height: 350px;
+    }
+
+    .nome-card {
+        margin-top: 14px;
+        font-size: 22px;
+    }
+
+    .rodape {
+        padding: 54px clamp(40px, 5vw, 90px);
+    }
+
+    .caixa-rodape {
+        flex-wrap: nowrap;
+        padding: clamp(40px, 5vw, 90px);
+        gap: 40px;
+    }
+
+    .coluna-rodape h4 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .coluna-rodape a {
+        font-size: 18px;
+        margin-bottom: 16px;
+    }
+
+    .redes-rodape {
+        gap: 20px;
+    }
+
+    .redes-rodape a {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+    }
+}
