@@ -17,3 +17,174 @@ body{
     background-color: var(--preto-profundo);
     color: var(--gelo-branco);
 }
+
+.menu-lateral-perfil.ativo {
+    display: grid;
+}
+
+.menu-lateral-semperfil.ativo {
+    display: grid;
+}
+
+
+/* MENU COM PERFIL */
+
+.menu-lateral-perfil {
+    display: none;
+    background-color: black;
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.logo {
+    padding-top: 20px;
+}
+
+.conteudo-menu {
+    padding: 20px 0  0 20px;
+}
+
+.logo-musichub {
+    background: black;
+    border: none;
+    margin-bottom: 50px;
+}
+
+.logo-musichub img {
+    width: 60%;
+}
+
+.textos-perfil {
+    height: 55px;
+    margin-left: 20px;
+}
+.perfil img {
+    width: 80px;
+    height: 80px;
+}
+
+.perfil {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.icone {
+    width: 40px;
+}
+
+.icone-texto {
+    display: flex;
+    align-items: center;
+}
+
+.icone-texto p {
+    font-size: 1.2em;
+    height: 25px;
+    margin-left: 10px;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.principal, .biblioteca, .suporte{
+    display: grid;
+    gap: 20px;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+span {
+    display: flex;
+    margin: 30px 0;
+    background-color: #FFFFFF60;
+    height: 1px;
+    width: 90%;
+}
+
+
+
+/* MENU SEM PERFIL */
+
+.menu-lateral-semperfil {
+    /* display: none; */
+    background-color: black;
+    width: 20vw;
+    height: 100vh;
+    position: fixed;
+}
+
+.logo {
+    padding-top: 20px;
+}
+
+.conteudo-menu {
+    padding: 20px 0  0 20px;
+}
+
+.logo-musichub {
+    background: black;
+    border: none;
+    margin-bottom: 50px;
+}
+
+.logo-musichub img {
+    width: 60%;
+}
+
+.textos-perfil2{
+    height: 30px;
+    margin-left: 20px;
+}
+.perfil2 img {
+    width: 80px;
+    height: 80px;
+}
+
+.perfil2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.icone {
+    width: 40px;
+}
+
+.icone-texto {
+    display: flex;
+    align-items: center;
+}
+
+.icone-texto p {
+    font-size: 1.2em;
+    height: 25px;
+    margin-left: 10px;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.principal, .suporte{
+    display: grid;
+    gap: 20px;
+}
+
+h4 {
+    font-size: 1.2em;
+}
+
+span {
+    display: flex;
+    margin: 30px 0;
+    background-color: #FFFFFF60;
+    height: 1px;
+    width: 90%;
+}
