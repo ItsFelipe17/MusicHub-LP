@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,48 +10,54 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="../global.css">
   <link rel="stylesheet" href="../tela-artista/tela-artista.css">
+  <link rel="shortcut icon" href="../imgs/Logo MH.svg" type="image/svg+xml">
   <title>Travis Scott · MusicHub</title>
 </head>
+
 <body>
-<div class="pagina">
+  <div class="pagina">
 
-  <header class="cabecalho">
-        <button class="botao-logo">
-            <img src="../tela-artista/imgs/Group 239253.svg" alt="">
-        </button>
-    
-        <div class="pesquisar">
-            <p>Pesquisar</p>
-        
-            <div class="lupa">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </div>
+    <header class="cabecalho">
+      <button class="botao-logo">
+        <a href="../Home-Perfil/home-perfil.html">
+          <img src="../tela-artista/imgs/Group 239253.svg" alt="">
+        </a>
+      </button>
 
-        <div class="perfil">
-            <h2>Seu Perfil</h2>
-            <img src="../tela-artista/imgs/pw.png" alt="">
+      <div class="pesquisar">
+        <p>Pesquisar</p>
+
+        <div class="lupa">
+          <i class="fa-solid fa-magnifying-glass"></i>
         </div>
+      </div>
+
+      <div class="perfil">
+        <h2>Seu Perfil</h2>
+        <a href="../tela-edit-user/edit-user.HTML">
+          <img src="../tela-artista/imgs/pw.png" alt="">
+        </a>
+      </div>
     </header>
 
-  <section class="destaque">
-    <img class="imagem-destaque" src="../tela-artista/imgs/ts.png" alt="Travis Scott">
-    <div class="conteudo-destaque">
-      <h1 class="nome-artista">Travis Scott</h1>
-      <p class="verificado">Verificado pelo MusicHub <span class="selo"><i class="fa-solid fa-check"></i></span></p>
-      <p class="ouvindo">Ouvindo agora: <strong>73.034</strong></p>
+    <section class="destaque">
+      <img class="imagem-destaque" src="../tela-artista/imgs/ts.png" alt="Travis Scott">
+      <div class="conteudo-destaque">
+        <h1 class="nome-artista">Travis Scott</h1>
+        <p class="verificado">Verificado pelo MusicHub <span class="selo"><i class="fa-solid fa-check"></i></span></p>
+        <p class="ouvindo">Ouvindo agora: <strong>73.034</strong></p>
+      </div>
+    </section>
+
+    <div class="controles">
+      <button class="botao-tocar" aria-label="Tocar"><i class="fa-solid fa-play"></i></button>
+      <button class="botao botao-seguir">Seguir</button>
+      <button class="botao botao-aleatorio">Ordem Aleatória</button>
+      <button class="botao-mais" aria-label="Mais opções">•••</button>
     </div>
-  </section>
 
-  <div class="controles">
-    <button class="botao-tocar" aria-label="Tocar"><i class="fa-solid fa-play"></i></button>
-    <button class="botao botao-seguir">Seguir</button>
-    <button class="botao botao-aleatorio">Ordem Aleatória</button>
-    <button class="botao-mais" aria-label="Mais opções">•••</button>
-  </div>
-
-  <section class="secao secao-faixas">
-    <h2 class="titulo-secao">Populares</h2>
+    <section class="secao secao-faixas">
+      <h2 class="titulo-secao">Populares</h2>
       <div class="faixa">
         <span class="indice-faixa">1</span>
         <img class="arte-faixa" src="../tela-artista/imgs/bitt.png" alt="">
@@ -91,61 +98,62 @@
         <span class="duracao-faixa">3:33</span>
         <span class="adicionar" aria-label="Adicionar à playlist">+</span>
       </div>
-  </section>
+    </section>
 
-  <section class="secao">
-    <h2 class="titulo-secao">Discografia</h2>
-    <div class="albuns">
-      <div class="album">
-        <img class="capa-album" src="../tela-artista/imgs/ast.png" alt="Capa de ASTROWORLD">
-        <p class="nome-album">ASTROWORLD</p>
-        <p class="meta-album">2018 · Álbum</p>
+    <section class="secao">
+      <h2 class="titulo-secao">Discografia</h2>
+      <div class="albuns">
+        <div class="album">
+          <img class="capa-album" src="../tela-artista/imgs/ast.png" alt="Capa de ASTROWORLD">
+          <p class="nome-album">ASTROWORLD</p>
+          <p class="meta-album">2018 · Álbum</p>
+        </div>
+        <div class="album">
+          <img class="capa-album" src="../tela-artista/imgs/utopia.png" alt="Capa de UTOPIA">
+          <p class="nome-album">UTOPIA</p>
+          <p class="meta-album">2023 · Álbum</p>
+        </div>
+        <div class="album">
+          <img class="capa-album" src="../tela-artista/imgs/bitt.png" alt="Capa de Birds In The Trap Sing McKnight">
+          <p class="nome-album">Birds In The Trap Sing McKnight</p>
+          <p class="meta-album">2016 · Álbum</p>
+        </div>
+        <div class="album">
+          <img class="capa-album" src="../tela-artista/imgs/RODEO.png" alt="Capa de Rodeo">
+          <p class="nome-album">Rodeo</p>
+          <p class="meta-album">2015 · Álbum</p>
+        </div>
       </div>
-      <div class="album">
-        <img class="capa-album" src="../tela-artista/imgs/utopia.png" alt="Capa de UTOPIA">
-        <p class="nome-album">UTOPIA</p>
-        <p class="meta-album">2023 · Álbum</p>
-      </div>
-      <div class="album">
-        <img class="capa-album" src="../tela-artista/imgs/bitt.png" alt="Capa de Birds In The Trap Sing McKnight">
-        <p class="nome-album">Birds In The Trap Sing McKnight</p>
-        <p class="meta-album">2016 · Álbum</p>
-      </div>
-      <div class="album">
-        <img class="capa-album" src="../tela-artista/imgs/RODEO.png" alt="Capa de Rodeo">
-        <p class="nome-album">Rodeo</p>
-        <p class="meta-album">2015 · Álbum</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="rodape">
-    <div class="caixa-rodape">
-      <div class="coluna-rodape">
-        <h4>Empresas</h4>
-        <a href="#">Sobre nós</a>
-        <a href="#">Empregos</a>
+    <footer class="rodape">
+      <div class="caixa-rodape">
+        <div class="coluna-rodape">
+          <h4>Empresas</h4>
+          <a href="#">Sobre nós</a>
+          <a href="#">Empregos</a>
+        </div>
+        <div class="coluna-rodape">
+          <h4>Comunidades</h4>
+          <a href="#">Para artistas</a>
+          <a href="#">Desenvolvedores</a>
+          <a href="#">Publicidade</a>
+        </div>
+        <div class="coluna-rodape">
+          <h4>Links úteis</h4>
+          <a href="#">Suporte</a>
+          <a href="#">Letras das músicas mais ouvidas</a>
+          <a href="#">Importar suas músicas</a>
+        </div>
+        <div class="redes-rodape">
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        </div>
       </div>
-      <div class="coluna-rodape">
-        <h4>Comunidades</h4>
-        <a href="#">Para artistas</a>
-        <a href="#">Desenvolvedores</a>
-        <a href="#">Publicidade</a>
-      </div>
-      <div class="coluna-rodape">
-        <h4>Links úteis</h4>
-        <a href="#">Suporte</a>
-        <a href="#">Letras das músicas mais ouvidas</a>
-        <a href="#">Importar suas músicas</a>
-      </div>
-      <div class="redes-rodape">
-        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
-      </div>
-    </div>
-  </footer>
+    </footer>
 
-</div>
+  </div>
 </body>
+
 </html>
