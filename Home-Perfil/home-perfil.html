@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home-Perfil</title>
-   
+
     <link rel="stylesheet" href="home-perfil.css">
     <link rel="stylesheet" href="../global.css">
     <link rel="shortcut icon" href="../Home-Perfil/imgs/Logo MusicHub.svg" type="image/x-icon">
@@ -12,18 +13,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
 </head>
+
 <body>
     <header class="cabecalho">
         <button class="botao-logo">
             <img src="../Home-Perfil/imgs/Group 239253.svg" alt="">
         </button>
-    
+
         <div class="pesquisar">
-            <p>Pesquisar</p>
-        
-            <div class="lupa">
-                <i class="fa-solid fa-magnifying-glass"><img src="imgs/" alt=""></i>
-            </div>
+            <input type="text" id="campoPesquisa" placeholder="Pesquisar" autocomplete="off">
+
+            <button id="botaoPesquisa" type="button" aria-label="Pesquisar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <div id="resultadosPesquisa" class="resultados-pesquisa"></div>
         </div>
 
         <div class="perfil">
@@ -33,7 +37,7 @@
     </header>
 
     <main>
-       <section class="banner-inicio">
+        <section class="banner-inicio">
             <div class="itens-esquerda">
                 <h1 class="bem-vindo">Bem-Vindo(a) ao MusicHub</h1>
                 <div class="card-ouvindo">
@@ -49,19 +53,31 @@
                 </div>
             </div>
 
-            
-            
-            <div class="card-michael">
-                <p>Ouvindo agora</p>
-                <img id="foto-michael" src="../Home-Perfil/imgs/ab67616d0000b2733138f891f3075c9c5d944037 1.svg" alt="">
-                <img src="../Home-Perfil/imgs/Group 239249 (1).svg" alt="">
-            </div>
-            
-            
-            
-       </section>
 
-       <section class="artistas-favoritos">
+
+            <div class="card-michael">
+                <p id="status-ouvindo">Ouvindo agora</p>
+                <img id="foto-michael" src="../Home/imagens/Foto-album.svg" alt="Capa do álbum">
+
+                <div class="progresso">
+                    <span id="tempo-atual" class="tempo">0:00</span>
+                    <div class="barra-progresso">
+                        <div id="barra-preenchida"></div>
+                    </div>
+                    <span id="tempo-total" class="tempo">0:00</span>
+                </div>
+
+                <div class="info-ouvindo">
+                    <h3 id="nome-ouvindo">Nada tocando</h3>
+                    <span id="artista-ouvindo"></span>
+                </div>
+            </div>
+
+
+
+        </section>
+
+        <section class="artistas-favoritos">
             <h1 class="titulo-secao">Seus artistas favoritos</h1>
             <div class="artistas">
 
@@ -97,130 +113,130 @@
                     <p>Henrique e Juliano</p>
                 </article>
 
-                
+
                 <button class="adicionar">
                     <img src="../Home-Perfil/imgs/Vector.svg" alt="">
                 </button>
-                
+
 
             </div>
-       </section>
+        </section>
 
-       <section class="ouvidas-recentemente">
+        <section class="ouvidas-recentemente">
             <h1 class="titulo-secao">Ouvidas recentemente</h1>
 
             <div class="musicas">
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 10.svg" alt="">
-                <h2>minha preferida</h2>
-                <p>G.A, Supernova Ent</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 10.svg" alt="">
+                    <h2>minha preferida</h2>
+                    <p>G.A, Supernova Ent</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 4.svg" alt="">
-                <h2>Tubarões (Ao vivo)</h2>
-                <p>Diego & Victor Hugo</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 4.svg" alt="">
+                    <h2>Tubarões (Ao vivo)</h2>
+                    <p>Diego & Victor Hugo</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 11.svg" alt="">
-                <h2>Baby Cê é Gata</h2>
-                <p>Kyan, Mu540</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 11.svg" alt="">
+                    <h2>Baby Cê é Gata</h2>
+                    <p>Kyan, Mu540</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/500x500.jpg" alt="">
-                <h2>goosebumps</h2>
-                <p>Travis Scott, Kendrick Lamar</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/500x500.jpg" alt="">
+                    <h2>goosebumps</h2>
+                    <p>Travis Scott, Kendrick Lamar</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 10.svg" alt="">
-                <h2>minha preferida</h2>
-                <p>G.A, Supernova Ent</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 10.svg" alt="">
+                    <h2>minha preferida</h2>
+                    <p>G.A, Supernova Ent</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 4.svg" alt="">
-                <h2>Tubarões (Ao vivo)</h2>
-                <p>Diego & Victor Hugo</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 4.svg" alt="">
+                    <h2>Tubarões (Ao vivo)</h2>
+                    <p>Diego & Victor Hugo</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 11.svg" alt="">
-                <h2>Baby Cê é Gata</h2>
-                <p>Kyan, Mu540</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 11.svg" alt="">
+                    <h2>Baby Cê é Gata</h2>
+                    <p>Kyan, Mu540</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/500x500.jpg" alt="">
-                <h2>goosebumps</h2>
-                <p>Travis Scott, Kendrick Lamar</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/500x500.jpg" alt="">
+                    <h2>goosebumps</h2>
+                    <p>Travis Scott, Kendrick Lamar</p>
+                </article>
 
             </div>
-       </section>
+        </section>
 
 
 
-       <section class="musicas-destaque">
+        <section class="musicas-destaque">
             <h1 class="titulo-secao">Músicas em destaque</h1>
 
             <div class="musicas">
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 2.svg" alt="">
-                <h2>Chuva de Bençãos</h2>
-                <p>Clayton & Romário</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 2.svg" alt="">
+                    <h2>Chuva de Bençãos</h2>
+                    <p>Clayton & Romário</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 1.svg" alt="">
-                <h2>O Rosto E O Resto</h2>
-                <p>Grelo</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 1.svg" alt="">
+                    <h2>O Rosto E O Resto</h2>
+                    <p>Grelo</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 3.svg" alt="">
-                <h2>Lembrança Boa</h2>
-                <p>Pedro e Benicio</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 3.svg" alt="">
+                    <h2>Lembrança Boa</h2>
+                    <p>Pedro e Benicio</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 3 (1).svg" alt="">
-                <h2>Príncipe Encantado</h2>
-                <p>Canal do Hit</p>
-            </article>
-            
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 2.svg" alt="">
-                <h2>Chuva de Bençãos</h2>
-                <p>Clayton & Romário</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 3 (1).svg" alt="">
+                    <h2>Príncipe Encantado</h2>
+                    <p>Canal do Hit</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 1.svg" alt="">
-                <h2>O Rosto E O Resto</h2>
-                <p>Grelo</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 2.svg" alt="">
+                    <h2>Chuva de Bençãos</h2>
+                    <p>Clayton & Romário</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 3.svg" alt="">
-                <h2>Lembrança Boa</h2>
-                <p>Pedro e Benicio</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 1.svg" alt="">
+                    <h2>O Rosto E O Resto</h2>
+                    <p>Grelo</p>
+                </article>
 
-            <article class="musica">
-                <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 3 (1).svg" alt="">
-                <h2>Príncipe Encantado</h2>
-                <p>Canal do Hit</p>
-            </article>
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 3.svg" alt="">
+                    <h2>Lembrança Boa</h2>
+                    <p>Pedro e Benicio</p>
+                </article>
+
+                <article class="musica">
+                    <img src="../Home-Perfil/imgs/Captura de tela 2026-08-18 081907 3 (1).svg" alt="">
+                    <h2>Príncipe Encantado</h2>
+                    <p>Canal do Hit</p>
+                </article>
 
             </div>
-       </section>
+        </section>
 
-       <footer class="footer">
+        <footer class="footer">
             <div class="rodape">
 
                 <nav class="empresa navs">
@@ -244,14 +260,24 @@
                 </nav>
 
                 <nav class="icones navs">
-                        <img src="../Home-Perfil/imgs/Group 100.svg" alt="">
-                        <img src="../Home-Perfil/imgs/Group 239250.svg" alt="">
-                        <img src="../Home-Perfil/imgs/Group 239251.svg" alt="">
+                    <img src="../Home-Perfil/imgs/Group 100.svg" alt="">
+                    <img src="../Home-Perfil/imgs/Group 239250.svg" alt="">
+                    <img src="../Home-Perfil/imgs/Group 239251.svg" alt="">
                 </nav>
             </div>
-       </footer>
-       
+        </footer>
+
     </main>
-    
+    <div id="playerContainer" class="player-container">
+        <button id="fecharPlayer" class="fechar-player" type="button" aria-label="Fechar player">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <iframe id="playerSpotify" title="Player do Spotify" width="100%" height="80" frameborder="0"
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+        </iframe>
+    </div>
+
+    <script src="home-perfil.js"></script>
 </body>
+
 </html>
