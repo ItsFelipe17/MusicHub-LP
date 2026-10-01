@@ -23,7 +23,7 @@ body{
 }
 
 .menu-lateral-semperfil.ativo {
-    display: grid;
+    display: block;
 }
 
 
@@ -112,7 +112,7 @@ span {
 /* MENU SEM PERFIL */
 
 .menu-lateral-semperfil {
-    /* display: none; */
+    display: none;
     background-color: black;
     width: 20vw;
     height: 100vh;

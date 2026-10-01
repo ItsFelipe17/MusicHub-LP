@@ -2,15 +2,15 @@
 const logo = document.getElementsByClassName("botao-logo"); // pegando o elemento pelo ID
 
 // estamos pegando o elemento de forma genérica - pode ser classe (precisa trazer o ponto) ou pode ser ID (precisa trazer o hashtag).
-const navMenu = document.querySelector(".navegacao")
+const menuLateral = document.querySelector(".menu-lateral-perfil")
 
-menu.addEventListener("click", function() {
+logo.addEventListener("click", function() {
 
-    if(navMenu.className == "navegacao") {
-        navMenu.className = "navegacao ativo";
+    if(menuLateral.className == "menu-lateral-perfil") {
+        menuLateral.className = "menu-lateral-perfil ativo";
     }
     else {
-        navMenu.className = "navegacao";
+        menuLateral.className = "menu-lateral-perfil";
     }
 }) 
 
