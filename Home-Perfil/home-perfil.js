@@ -4,6 +4,8 @@
 
 const API_URL = "http://127.0.0.1:3000";
 
+const FOTO_PADRAO = "../Home/imagens/Foto-album.svg";
+
 
 // ========================================
 // ELEMENTOS DO HTML
@@ -17,6 +19,15 @@ const caixaPesquisa = document.querySelector(".pesquisar");
 const playerContainer = document.getElementById("playerContainer");
 const playerSpotify = document.getElementById("playerSpotify");
 const fecharPlayer = document.getElementById("fecharPlayer");
+
+const bannerInicio = document.querySelector(".banner-inicio");
+const statusAgora = document.getElementById("status-ouvindo");
+const barraPreenchida = document.getElementById("barra-preenchida");
+const tempoAtual = document.getElementById("tempo-atual");
+const tempoTotal = document.getElementById("tempo-total");
+const fotoAgora = document.getElementById("foto-michael");
+const nomeAgora = document.getElementById("nome-ouvindo");
+const artistaAgora = document.getElementById("artista-ouvindo");
 
 
 // ========================================
@@ -149,7 +160,13 @@ function mostrarResultados(dados) {
         elementos.push(criarTitulo("Músicas"));
         musicas.forEach(m => {
             elementos.push(
-                criarItem(m.nome, m.artistas, m.imagem, () => tocarEmbed("track", m.id))
+                criarItem(m.nome, m.artistas, m.imagem, () =>
+                    tocarEmbed("track", m.id, {
+                        nome: m.nome,
+                        artistas: m.artistas,
+                        imagem: m.imagem
+                    })
+                )
             );
         });
     }
@@ -186,7 +203,7 @@ async function abrirArtista(artista) {
 
     } catch (erro) {
         tratarErro(erro);
-    }       
+    }
 }
 
 async function abrirAlbum(albumId, aoVoltar) {
@@ -199,7 +216,13 @@ async function abrirAlbum(albumId, aoVoltar) {
         const titulo = criarTitulo(`${album.nome} · ${album.artistas} · ${album.ano}`);
 
         const tocarTudo = criarItem(
-            "Tocar álbum inteiro", "", album.imagem, () => tocarEmbed("album", album.id)
+            "Tocar álbum inteiro", "", album.imagem, () =>
+                tocarEmbed("album", album.id, {
+                    nome: album.nome,
+                    artistas: album.artistas,
+                    imagem: album.imagem,
+                    faixas: album.faixas
+                })
         );
         tocarTudo.classList.add("item-destaque");
 
@@ -208,7 +231,11 @@ async function abrirAlbum(albumId, aoVoltar) {
                 `${f.numero}. ${f.nome}`,
                 f.artistas,
                 "",
-                () => tocarEmbed("track", f.id)
+                () => tocarEmbed("track", f.id, {
+                    nome: f.nome,
+                    artistas: f.artistas,
+                    imagem: album.imagem
+                })
             )
         );
 
@@ -263,7 +290,7 @@ campoPesquisa.addEventListener("input", () => {
     temporizador = setTimeout(() => pesquisarSpotify(texto), 400);
 });
 
-// Fecha ao clicar fora (composedPath funciona mesmo se o item clicado for removido da tela)
+// Fecha ao clicar fora
 document.addEventListener("click", e => {
     if (!e.composedPath().includes(caixaPesquisa)) {
         resultadosPesquisa.style.display = "none";
@@ -272,13 +299,101 @@ document.addEventListener("click", e => {
 
 
 // ========================================
+// CARD "OUVINDO AGORA"
+// ========================================
+
+let infoAtual = null;   // música ou álbum escolhido no player
+let faixaAtual = null;  // faixa que está tocando (quando é um álbum)
+
+function formatarTempo(ms) {
+    const total = Math.max(0, Math.floor(ms / 1000));
+    const minutos = Math.floor(total / 60);
+    const segundos = String(total % 60).padStart(2, "0");
+    return `${minutos}:${segundos}`;
+}
+
+// Fundo desfocado do banner acompanha a capa atual
+function definirFundo(imagem) {
+    const src = (imagem || FOTO_PADRAO).replace(/"/g, "%22");
+    bannerInicio.style.setProperty("--capa-fundo", `url("${src}")`);
+}
+
+function atualizarProgresso(posicao, duracao) {
+    const porcentagem = duracao > 0 ? Math.min(100, (posicao / duracao) * 100) : 0;
+    barraPreenchida.style.width = porcentagem + "%";
+    tempoAtual.textContent = formatarTempo(posicao);
+    tempoTotal.textContent = formatarTempo(duracao);
+}
+
+function mostrarOuvindoAgora(pausado = false) {
+    if (!infoAtual) return;
+
+    // sai do modo "nada tocando"
+    bannerInicio.classList.remove("ocioso");
+
+    const nome = faixaAtual ? faixaAtual.nome : infoAtual.nome;
+    const artistas = faixaAtual ? faixaAtual.artistas : infoAtual.artistas;
+
+    fotoAgora.src = infoAtual.imagem || FOTO_PADRAO;
+    definirFundo(infoAtual.imagem);
+
+    statusAgora.textContent = pausado ? "Pausado" : "Ouvindo agora";
+    nomeAgora.textContent = nome;
+    artistaAgora.textContent = artistas || "";
+}
+
+// Só é chamado quando o player é fechado (pausar NÃO limpa o card)
+function limparOuvindoAgora() {
+    // modo "nada tocando": fica igual à página home
+    bannerInicio.classList.add("ocioso");
+
+    infoAtual = null;
+    faixaAtual = null;
+
+    fotoAgora.src = FOTO_PADRAO;
+    definirFundo(null);
+
+    statusAgora.textContent = "Ouvindo agora";
+    nomeAgora.textContent = "Nada tocando";
+    artistaAgora.textContent = "";
+    atualizarProgresso(0, 0);
+}
+
+// O embed do Spotify avisa a página sobre play, pausa, faixa e posição
+window.addEventListener("message", e => {
+    if (e.origin !== "https://open.spotify.com") return;
+    if (e.source !== playerSpotify.contentWindow) return;
+    if (!e.data || e.data.type !== "playback_update" || !infoAtual) return;
+
+    const dados = e.data.payload || {};
+
+    // Em álbuns, descobre qual faixa está tocando agora
+    const uri = dados.playingURI || "";
+    if (infoAtual.faixas && uri.startsWith("spotify:track:")) {
+        const idFaixa = uri.split(":")[2];
+        faixaAtual = infoAtual.faixas.find(f => f.id === idFaixa) || faixaAtual;
+    }
+
+    mostrarOuvindoAgora(Boolean(dados.isPaused));
+    atualizarProgresso(dados.position || 0, dados.duration || 0);
+});
+
+limparOuvindoAgora();
+
+
+// ========================================
 // PLAYER (EMBED)
 // ========================================
 
 const ID_VALIDO = /^[A-Za-z0-9]+$/;
 
-function tocarEmbed(tipo, id) {
+function tocarEmbed(tipo, id, info) {
     if (!ID_VALIDO.test(id)) return;
+
+    infoAtual = info;
+    faixaAtual = null;
+    mostrarOuvindoAgora(false);
+    atualizarProgresso(0, 0);
 
     playerSpotify.src =
         `https://open.spotify.com/embed/${tipo}/${id}?utm_source=generator&theme=0`;
@@ -290,5 +405,6 @@ function tocarEmbed(tipo, id) {
 fecharPlayer.addEventListener("click", () => {
     playerSpotify.src = "";
     playerContainer.style.display = "none";
+    limparOuvindoAgora();
 });
 // FINALIZADO
