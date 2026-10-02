@@ -1,5 +1,5 @@
 
-const logo = document.getElementsByClassName("botao-logo"); // pegando o elemento pelo ID
+const logo = document.getElementsByClassName(".botao-logo"); // pegando o elemento pelo ID
 
 // estamos pegando o elemento de forma genérica - pode ser classe (precisa trazer o ponto) ou pode ser ID (precisa trazer o hashtag).
 const menuLateral = document.querySelector(".menu-lateral-perfil")
